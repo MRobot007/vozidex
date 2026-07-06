@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VOZIDEX — Used Cars, Rentals &amp; Accessories in Rajkot</title>
+<meta name="description" content="VOZIDEX in Rajkot buys and sells inspected used cars, runs self-drive & chauffeur rentals, and fits accessories in-shop. Enquire for today's stock — Swift, Baleno, Creta, City, Nexon, Innova and more." />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="canonical" href="https://www.vozidex.example/" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="business.business" />
+<meta property="og:site_name" content="VOZIDEX" />
+<meta property="og:title" content="VOZIDEX — Used Cars, Rentals & Accessories in Rajkot" />
+<meta property="og:description" content="Inspected used cars, self-drive & chauffeur rentals, and in-shop accessory fitting. Trusted in Rajkot since 2016." />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:url" content="https://www.vozidex.example/" />
+<!-- Replace with a real hosted preview image at deploy time -->
+<meta property="og:image" content="https://www.vozidex.example/og.jpg" />
+<meta property="og:image:alt" content="VOZIDEX — used cars, rentals and accessories in Rajkot" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.vozidex.example/og.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23FF3340'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='15' font-weight='bold' text-anchor='middle' fill='%23ffffff'%3EV%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "name": "VOZIDEX",
+  "description": "Used car sales, self-drive & chauffeur-driven rentals, and accessory fitting in Rajkot, Gujarat.",
+  "image": "https://www.vozidex.example/og.jpg",
+  "url": "https://www.vozidex.example/",
+  "telephone": "+919876543210",
+  "priceRange": "₹₹",
+  "foundingDate": "2016",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop 7, Kalawad Road",
+    "addressLocality": "Rajkot",
+    "addressRegion": "Gujarat",
+    "postalCode": "360005",
+    "addressCountry": "IN"
+  },
+  "areaServed": "Rajkot",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "17:00" }
+  ],
+  "makesOffered": ["Maruti Suzuki","Hyundai","Tata","Mahindra","Toyota","Honda"]
+}
+</script>
+
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root{
+  --bg:#08080a;
+  --surface:rgba(20,18,23,.55);
+  --card:rgba(28,25,31,.55);
+  --card-2:rgba(255,255,255,.055);
+  --stroke:rgba(255,255,255,.11);
+  --stroke-2:rgba(255,255,255,.16);
+  --glass-blur:blur(16px) saturate(140%);
+  --glass-hi:inset 0 1px 0 rgba(255,255,255,.09);
+
+  --accent:#FF3340;
+  --accent-hi:#FF5C66;
+  --on-accent:#12060a;
+  --light-card:#F2F1EC;
+
+  --text:#F4F4F2;
+  --muted:#A0A1A6;
+
+  --green:#54E39A;
+
+  --r-chip:10px;
+  --r-card:20px;
+  --r-hero:28px;
+
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --dur:.28s;
+
+  --glow:0 18px 50px -20px rgba(255,51,64,.55);
+  --shadow-card:0 26px 60px -30px rgba(0,0,0,.85);
+
+  --maxw:1200px;
+  --nav-h:86px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-weight:400;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  max-width:100%;
+}
+h1,h2,h3,h4{font-family:"Plus Jakarta Sans",system-ui,sans-serif;letter-spacing:-.02em;line-height:1.05;margin:0;overflow-wrap:break-word}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img,svg{display:block;max-width:100%}
+ul{margin:0;padding:0;list-style:none}
+
+section{scroll-margin-top:90px}
+.wrap{width:min(100% - 40px,var(--maxw));margin-inline:auto}
+
+.eyebrow{
+  font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;
+  color:var(--accent);
+}
+.accent{color:var(--accent)}
+.muted{color:var(--muted)}
+
+/* Focus */
+:focus-visible{outline:2px solid var(--accent-hi);outline-offset:3px;border-radius:6px}
+
+/* Accessibility utilities */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{
+  position:fixed;top:10px;left:10px;z-index:2000;
+  background:var(--accent);color:var(--on-accent);padding:.7em 1.15em;border-radius:999px;font-weight:700;
+  transform:translateY(-200%);transition:transform .2s var(--ease);
+}
+.skip-link:focus{transform:translateY(0)}
+
+/* ============================================================
+   ATMOSPHERE — ambient glows + grain + vignette
+   ============================================================ */
+/* Ambient red glows behind all glass surfaces (fixed, deepest layer) */
+.page-bg{
+  position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:
+    radial-gradient(680px circle at 12% 12%, rgba(255,51,64,.16), transparent 60%),
+    radial-gradient(760px circle at 88% 24%, rgba(255,110,70,.11), transparent 62%),
+    radial-gradient(640px circle at 50% 98%, rgba(255,40,90,.11), transparent 60%);
+}
+
+/* ---- Glassmorphism: frost every surface ---- */
+.card,.searchbar,.plan,.why-card,.visit-info,.map-card,.enquiry-card,.body-card,
+.make-tile .circle,.fav-btn,.pill,.photo-tile,.enq-input,.enq-select,.enq-textarea,.info-block .ic,.status-tag{
+  backdrop-filter:var(--glass-blur);
+  -webkit-backdrop-filter:var(--glass-blur);
+}
+.card,.plan,.why-card,.visit-info,.enquiry-card{box-shadow:var(--glass-hi),0 22px 50px -32px rgba(0,0,0,.8)}
+
+/* Decorative atmosphere sits over page content but BELOW fixed chrome (nav/CTAs) */
+.grain,.vignette{position:fixed;inset:0;pointer-events:none;z-index:50}
+.grain{
+  opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.vignette{
+  background:radial-gradient(120% 90% at 50% 0%,transparent 55%,rgba(0,0,0,.55) 100%);
+}
+
+/* ============================================================
+   BUTTONS / PILLS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;gap:.5em;
+  padding:.72em 1.25em;border-radius:999px;
+  font-weight:600;font-size:.95rem;white-space:nowrap;
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),background var(--dur) var(--ease),color var(--dur) var(--ease),border-color var(--dur) var(--ease);
+}
+.btn svg{width:18px;height:18px}
+.btn-yellow{background:var(--accent);color:var(--on-accent)}
+.btn-yellow:hover{background:var(--accent-hi);transform:translateY(-2px);box-shadow:var(--glow)}
+.btn-dark{background:var(--on-accent);color:var(--accent)}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 18px 44px -20px rgba(0,0,0,.9)}
+.btn-ghost{border:1px solid var(--stroke-2);color:var(--text);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.btn-light{background:var(--on-accent);color:var(--accent)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 18px 40px -22px rgba(0,0,0,.7)}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);
+  display:flex;align-items:center;
+  transition:background var(--dur) var(--ease),backdrop-filter var(--dur),border-color var(--dur);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  background:rgba(10,10,11,.72);
+  backdrop-filter:blur(16px) saturate(140%);
+  -webkit-backdrop-filter:blur(16px) saturate(140%);
+  border-bottom-color:var(--stroke);
+}
+.nav .wrap{display:flex;align-items:center;gap:20px;width:min(100% - 40px,var(--maxw))}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-family:"Plus Jakarta Sans";font-size:1.15rem;letter-spacing:-.02em}
+.brand .mark{
+  width:64px;height:64px;object-fit:contain;flex-shrink:0;
+  filter:drop-shadow(0 4px 10px rgba(255,51,64,.35));
+}
+.footer .brand .mark{width:72px;height:72px}
+.nav-links{display:flex;gap:6px;margin-left:14px}
+.nav-links a{
+  padding:.5em .85em;border-radius:999px;font-size:.92rem;color:var(--muted);font-weight:500;
+  transition:color var(--dur),background var(--dur);
+}
+.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
+.fav-btn{
+  position:relative;width:42px;height:42px;border-radius:50%;
+  display:grid;place-items:center;border:1px solid var(--stroke-2);background:rgba(255,255,255,.02);
+  transition:border-color var(--dur),transform var(--dur) var(--ease),background var(--dur);
+}
+.fav-btn:hover{border-color:var(--accent);transform:translateY(-2px)}
+.fav-btn svg{width:20px;height:20px;stroke:var(--text);fill:none}
+.fav-badge{
+  position:absolute;top:-4px;right:-4px;min-width:19px;height:19px;padding:0 5px;
+  background:var(--accent);color:var(--on-accent);border-radius:999px;
+  font-size:11px;font-weight:700;display:grid;place-items:center;
+  transform:scale(0);transition:transform var(--dur) var(--ease);
+  border:2px solid var(--bg);
+}
+.fav-badge.show{transform:scale(1)}
+.hamburger{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--stroke-2);flex-direction:column;gap:5px;align-items:center;justify-content:center;background:rgba(255,255,255,.02)}
+.hamburger span{width:18px;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dur) var(--ease),opacity var(--dur)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu drawer */
+.mobile-menu{
+  position:fixed;inset:var(--nav-h) 0 auto 0;z-index:999;
+  background:rgba(12,12,14,.97);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--stroke);
+  display:grid;gap:4px;padding:14px 20px 22px;
+  transform:translateY(-140%);visibility:hidden;
+  transition:transform .4s var(--ease),visibility .4s var(--ease);
+}
+.mobile-menu.open{transform:translateY(0);visibility:visible}
+@media (min-width:901px){.mobile-menu{display:none}}
+.mobile-menu a{padding:.85em .6em;border-radius:12px;color:var(--text);font-weight:600;font-size:1.05rem}
+.mobile-menu a:hover{background:rgba(255,255,255,.05)}
+.mobile-menu .row{display:flex;gap:10px;margin-top:10px}
+.mobile-menu .row .btn{flex:1;justify-content:center}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding:calc(var(--nav-h) + 54px) 0 60px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:radial-gradient(120% 80% at 50% -10%,#1e0c10 0%,rgba(30,12,16,.45) 38%,var(--bg) 70%);
+}
+.hero-orbs{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(64px);opacity:.55;will-change:transform}
+.orb.o1{width:440px;height:440px;top:-90px;left:-70px;background:radial-gradient(circle,rgba(255,51,64,.55),transparent 70%)}
+.orb.o2{width:380px;height:380px;top:14%;right:-90px;background:radial-gradient(circle,rgba(255,120,70,.4),transparent 70%)}
+.orb.o3{width:300px;height:300px;bottom:-60px;left:38%;background:radial-gradient(circle,rgba(255,40,90,.32),transparent 70%)}
+.hero-logo-bg{
+  position:absolute;top:1%;left:50%;transform:translateX(-50%);
+  width:min(560px,110%);opacity:.14;filter:blur(6px);
+  z-index:-1;pointer-events:none;
+}
+.hero-inner{max-width:820px;margin-inline:auto;text-align:center}
+.hero h1{font-size:clamp(2.6rem,6vw,5rem);font-weight:800;margin:16px 0 0}
+.hero-sub{color:var(--muted);font-size:clamp(1rem,1.3vw,1.18rem);max-width:620px;margin:20px auto 0}
+
+/* Search bar */
+.searchbar{
+  display:flex;align-items:center;gap:8px;max-width:720px;margin:34px auto 0;
+  background:var(--card);border:1px solid var(--stroke-2);border-radius:999px;
+  padding:8px 8px 8px 20px;
+  transition:border-color var(--dur),box-shadow var(--dur) var(--ease);
+}
+.searchbar:focus-within{border-color:var(--accent);box-shadow:0 0 0 4px rgba(255,51,64,.14)}
+.searchbar .s-icon{width:20px;height:20px;stroke:var(--muted);flex-shrink:0}
+.searchbar input{
+  flex:1;min-width:0;background:none;border:0;color:var(--text);font-size:1rem;font-family:inherit;padding:.6em 0;
+}
+.searchbar input::placeholder{color:var(--muted)}
+.searchbar input:focus{outline:none}
+.s-clear{
+  width:30px;height:30px;border-radius:50%;display:none;place-items:center;color:var(--muted);
+  background:rgba(255,255,255,.06);flex-shrink:0;
+}
+.s-clear.show{display:grid}
+.s-clear:hover{color:var(--text)}
+.s-clear svg{width:14px;height:14px}
+.s-btn{flex-shrink:0}
+
+/* Two feature cards */
+.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.feature-card{
+  position:relative;border-radius:var(--r-hero);min-height:480px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:38px;
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);
+}
+.feature-card:hover{transform:translateY(-6px)}
+.fc-car{
+  position:absolute;top:12%;left:50%;transform:translateX(-50%);width:82%;max-width:560px;max-height:42%;
+  object-fit:contain;object-position:center;z-index:1;pointer-events:none;
+  filter:drop-shadow(0 20px 24px rgba(0,0,0,.38));transition:transform .55s var(--ease);
+}
+.feature-card:hover .fc-car{transform:translateX(-50%) scale(1.05)}
+.fc-content{position:relative;z-index:2;max-width:82%}
+.fc-content .fc-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+.fc-content h2{font-size:clamp(1.9rem,3vw,2.7rem);font-weight:800;margin:8px 0 8px}
+.fc-content p{font-size:1rem;max-width:26ch;margin-bottom:22px}
+.fc-content .btn{align-self:flex-start}
+.fc-btn-cream{background:#ffffff;color:#15151a}
+.fc-btn-cream:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(0,0,0,.55)}
+.fc-buy{
+  background:linear-gradient(150deg,rgba(255,92,102,.5),rgba(232,42,56,.6));color:#fff;
+  backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
+  border:1px solid rgba(255,255,255,.2);box-shadow:var(--glass-hi)
+}
+.fc-buy:hover{box-shadow:0 30px 70px -30px rgba(255,51,64,.6)}
+.fc-buy .fc-eyebrow{color:rgba(255,255,255,.82)}
+.fc-rent{
+  background:linear-gradient(150deg,rgba(250,250,248,.74),rgba(238,237,232,.66));color:#161616;
+  backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
+  border:1px solid rgba(255,255,255,.5);box-shadow:var(--glass-hi)
+}
+.fc-rent:hover{box-shadow:0 30px 70px -34px rgba(0,0,0,.7)}
+.fc-rent .fc-eyebrow{color:#4a4a44}
+
+/* Trust row */
+.trust-row{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:30px;
+  color:var(--muted);font-size:.94rem;font-weight:500;
+}
+.trust-row b{color:var(--text);font-weight:700}
+.trust-row .dot{color:var(--accent)}
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+.section{padding:70px 0}
+.sec-head{margin-bottom:34px;max-width:640px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,3rem);font-weight:800;margin-top:12px}
+.sec-head p{color:var(--muted);margin-top:12px;font-size:1.02rem}
+
+/* ============================================================
+   FILTER RAIL
+   ============================================================ */
+.filter-rail{padding-top:20px}
+.pill-row{display:flex;gap:10px;flex-wrap:wrap}
+.pill{
+  padding:.62em 1.15em;border-radius:999px;font-weight:600;font-size:.92rem;
+  background:var(--card);border:1px solid var(--stroke);color:var(--muted);
+  transition:all var(--dur) var(--ease);
+}
+.pill:hover{color:var(--text);border-color:var(--stroke-2);transform:translateY(-1px)}
+.pill.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);box-shadow:var(--glow)}
+.pill .count{opacity:.6;font-weight:500;margin-left:.3em}
+.pill.active .count{opacity:.7}
+
+.makes-label{margin:34px 0 16px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600}
+.makes-row{display:flex;gap:16px;flex-wrap:wrap}
+.make-tile{
+  display:flex;flex-direction:column;align-items:center;gap:9px;width:84px;text-align:center;
+  background:none;border:0;padding:0;cursor:pointer;font-family:inherit;color:inherit;
+}
+.make-tile .circle{
+  width:66px;height:66px;border-radius:50%;background:var(--card);border:1px solid var(--stroke);
+  display:grid;place-items:center;font-family:"Plus Jakarta Sans";font-weight:800;font-size:1.15rem;letter-spacing:-.02em;
+  color:var(--text);transition:all var(--dur) var(--ease);
+}
+.make-tile:hover .circle{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);box-shadow:var(--glow)}
+.make-tile span{font-size:.78rem;color:var(--muted);line-height:1.2}
+
+/* ============================================================
+   CARD GRID (stock + accessories)
+   ============================================================ */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid.acc-grid{grid-template-columns:repeat(4,1fr);margin-top:24px}
+
+.card{
+  position:relative;background:var(--card);border:1px solid var(--stroke);border-radius:var(--r-card);
+  padding:18px;display:flex;flex-direction:column;overflow:hidden;
+  transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur) var(--ease);
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,51,64,.45);box-shadow:0 30px 60px -34px rgba(0,0,0,.85),0 0 0 1px rgba(255,51,64,.12)}
+.card.hidden{display:none}
+
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.card-top h3{font-size:1.12rem;font-weight:700}
+.acc-grid .card-top h3{font-size:1rem}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-top:6px}
+.price{font-family:"Plus Jakarta Sans";font-weight:800;font-size:1.32rem;color:var(--text)}
+.acc-grid .price{font-size:1.15rem}
+.price small{font-size:.72em;font-weight:600;color:var(--muted)}
+.rating{display:inline-flex;align-items:center;gap:3px;font-size:.86rem;color:var(--muted);font-weight:600}
+.rating .star{color:var(--accent)}
+
+.card-media{
+  margin:8px -6px 14px;border-radius:14px;height:150px;position:relative;overflow:hidden;
+  background:radial-gradient(80% 90% at 50% 44%,var(--card-2),transparent 78%);
+}
+.card-media .car-svg{position:absolute;inset:0;width:100%;height:100%;padding:6px}
+.card-media .car-photo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10px 12px;
+  filter:drop-shadow(0 8px 10px rgba(0,0,0,.5));
+  transition:transform var(--dur) var(--ease);
+}
+.card:hover .car-photo{transform:scale(1.05)}
+.acc-media{display:grid;place-items:center;padding:18px 4px}
+.acc-media svg{width:96px;height:96px}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:.42em .7em;border-radius:var(--r-chip);
+  background:var(--card-2);border:1px solid var(--stroke);
+  font-size:.78rem;color:var(--muted);font-weight:500;white-space:nowrap;
+}
+.chip svg{width:14px;height:14px;stroke:var(--accent);opacity:.85}
+
+.status{display:flex;align-items:center;gap:7px;margin-top:14px;font-size:.82rem;font-weight:600}
+.status .dot{width:8px;height:8px;border-radius:50%}
+.status.sale .dot{background:var(--green);box-shadow:0 0 0 4px rgba(84,227,154,.15)}
+.status.rent .dot{background:var(--accent);box-shadow:0 0 0 4px rgba(255,51,64,.15)}
+.status.sale{color:var(--green)}
+.status.rent{color:var(--accent)}
+.status.acc{color:var(--muted)}
+.status.acc .dot{background:var(--muted)}
+
+/* heart */
+.fav{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;background:var(--card-2);border:1px solid var(--stroke);
+  transition:border-color var(--dur),background var(--dur),transform var(--dur) var(--ease);
+}
+.fav svg{width:18px;height:18px;stroke:var(--muted);fill:none;transition:stroke var(--dur),fill var(--dur)}
+.fav:hover{border-color:var(--accent)}
+.fav:hover svg{stroke:var(--accent)}
+.fav.on svg{fill:var(--accent);stroke:var(--accent)}
+.fav.pop{animation:pop .4s var(--ease)}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.3)}100%{transform:scale(1)}}
+
+/* enquire on hover */
+.enquire-pill{
+  position:absolute;left:18px;bottom:18px;right:18px;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  padding:.7em;border-radius:999px;background:var(--accent);color:var(--on-accent);
+  font-weight:700;font-size:.9rem;
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease);
+}
+.card:hover .enquire-pill{opacity:1;transform:translateY(0);pointer-events:auto}
+.card:focus-within .enquire-pill{opacity:1;transform:translateY(0);pointer-events:auto}
+
+.empty-state{
+  grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 20px;
+  border:1px dashed var(--stroke-2);border-radius:var(--r-card);
+}
+.empty-state.hidden{display:none}
+.acc-title{margin:56px 0 4px;font-size:1.3rem;font-weight:700}
+.acc-title.hidden{display:none}
+.acc-sub{color:var(--muted);font-size:.95rem}
+
+/* ============================================================
+   BODY TYPE SCROLLER
+   ============================================================ */
+.scroller{display:flex;gap:18px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.scroller::-webkit-scrollbar{display:none}
+.scroller{scrollbar-width:none}
+.body-card{
+  position:relative;flex:0 0 300px;height:210px;border-radius:var(--r-card);overflow:hidden;
+  background:linear-gradient(160deg,var(--card-2),var(--surface));border:1px solid var(--stroke);
+  scroll-snap-align:start;cursor:pointer;
+  transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur) var(--ease);
+}
+.body-card:hover{transform:translateY(-5px);border-color:rgba(255,51,64,.4);box-shadow:var(--shadow-card)}
+.body-card .bc-car{position:absolute;inset:14px 14px 52px;display:grid;place-items:center}
+.body-card .bc-photo{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.55));transition:transform .5s var(--ease)}
+.body-card:hover .bc-photo{transform:scale(1.06)}
+.body-card .bc-name{position:absolute;left:20px;bottom:18px;font-family:"Plus Jakarta Sans";font-weight:700;font-size:1.15rem}
+.body-card .bc-arrow{
+  position:absolute;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);
+  display:grid;place-items:center;transition:transform var(--dur) var(--ease);
+}
+.body-card:hover .bc-arrow{transform:rotate(-45deg) scale(1.08)}
+.body-card .bc-arrow svg{width:20px;height:20px}
+
+/* ============================================================
+   RENTAL PLANS
+   ============================================================ */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{
+  position:relative;background:var(--card);border:1px solid var(--stroke);border-radius:var(--r-card);
+  padding:28px;display:flex;flex-direction:column;
+  transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur) var(--ease);
+}
+.plan:hover{transform:translateY(-5px);border-color:rgba(255,51,64,.4);box-shadow:var(--shadow-card)}
+.plan.featured{background:linear-gradient(160deg,rgba(255,51,64,.09),var(--card));border-color:rgba(255,51,64,.3)}
+.plan .p-name{font-size:1.35rem;font-weight:700}
+.plan .p-price{font-family:"Plus Jakarta Sans";font-weight:800;font-size:1.7rem;margin:10px 0 4px}
+.plan .p-price small{font-size:.55em;color:var(--muted);font-weight:600}
+.plan ul{margin:18px 0 22px;display:grid;gap:11px}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:.94rem;color:var(--muted)}
+.plan li svg{width:18px;height:18px;stroke:var(--accent);flex-shrink:0;margin-top:2px}
+.p-tag{
+  align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;gap:6px;
+  padding:.6em 1.1em;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:.9rem;
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);
+}
+.p-tag:hover{transform:translateY(-2px);box-shadow:var(--glow)}
+.p-tag svg{width:16px;height:16px}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.about-story p{color:var(--muted);margin-top:16px;font-size:1.03rem}
+.about-story .owner{color:var(--text);font-weight:600}
+.photo-tile{
+  aspect-ratio:4/3;border-radius:var(--r-card);border:1px dashed var(--stroke-2);
+  background:linear-gradient(160deg,var(--card-2),var(--surface));
+  display:grid;place-items:center;text-align:center;color:var(--muted);gap:10px;padding:20px;
+}
+.photo-tile svg{width:54px;height:54px;stroke:var(--muted);opacity:.6}
+.photo-tile span{font-size:.85rem;letter-spacing:.02em}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.why-card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:20px;transition:border-color var(--dur),transform var(--dur) var(--ease)}
+.why-card:hover{border-color:rgba(255,51,64,.35);transform:translateY(-3px)}
+.why-card .ic{width:42px;height:42px;border-radius:12px;background:rgba(255,51,64,.1);display:grid;place-items:center;margin-bottom:12px}
+.why-card .ic svg{width:22px;height:22px;stroke:var(--accent)}
+.why-card h3{font-size:1.02rem;margin-bottom:6px}
+.why-card p{font-size:.88rem;color:var(--muted)}
+
+/* ============================================================
+   VISIT US
+   ============================================================ */
+.visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:stretch}
+.visit-info{background:var(--card);border:1px solid var(--stroke);border-radius:var(--r-card);padding:30px;display:flex;flex-direction:column;gap:20px}
+.info-block{display:flex;gap:14px;align-items:flex-start}
+.info-block .ic{width:40px;height:40px;border-radius:12px;background:var(--card-2);display:grid;place-items:center;flex-shrink:0}
+.info-block .ic svg{width:20px;height:20px;stroke:var(--accent)}
+.info-block .lbl{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.info-block .val{font-weight:600;margin-top:2px}
+.info-block a.val:hover{color:var(--accent)}
+.hours-table{width:100%;border-collapse:collapse;font-size:.92rem}
+.hours-table td{padding:6px 0;border-bottom:1px solid var(--stroke)}
+.hours-table td:last-child{text-align:right;color:var(--muted)}
+.map-card{border-radius:var(--r-card);overflow:hidden;border:1px solid var(--stroke);min-height:420px;background:var(--card)}
+.map-card iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+
+/* ============================================================
+   ENQUIRY
+   ============================================================ */
+.enquiry{position:relative}
+.enquiry-card{
+  background:var(--card);border:1px solid var(--stroke);border-radius:var(--r-card);
+  padding:14px;margin-top:14px;box-shadow:var(--shadow-card);
+}
+.enquiry-frame{width:100%;min-height:1000px;border:0;border-radius:14px;background:#fff;display:block}
+.form-placeholder{
+  min-height:420px;border-radius:14px;border:1px dashed var(--stroke-2);
+  display:grid;place-items:center;text-align:center;gap:14px;padding:40px 24px;color:var(--muted);
+}
+.form-placeholder svg{width:60px;height:60px;stroke:var(--accent);opacity:.7}
+.form-placeholder code{background:var(--card-2);padding:.2em .5em;border-radius:6px;color:var(--accent-hi);font-size:.85em}
+
+/* Native enquiry form (default when no Google Form is configured) */
+.enq-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:24px}
+.enq-field{display:flex;flex-direction:column;gap:7px}
+.enq-field.full{grid-column:1/-1}
+.enq-field label{font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.enq-field label .req{color:var(--accent)}
+.enq-input,.enq-select,.enq-textarea{
+  background:var(--card-2);border:1px solid var(--stroke);border-radius:12px;
+  padding:.82em 1em;color:var(--text);font-family:inherit;font-size:.95rem;width:100%;
+  transition:border-color var(--dur),box-shadow var(--dur);
+}
+.enq-input::placeholder,.enq-textarea::placeholder{color:#71727a}
+.enq-input:focus,.enq-select:focus,.enq-textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,51,64,.14)}
+.enq-input:invalid:not(:placeholder-shown){border-color:#e2564b}
+.enq-textarea{resize:vertical;min-height:104px}
+.enq-select{
+  appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23A0A1A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;
+}
+.enq-select option{background:var(--card);color:var(--text)}
+.enq-submit{grid-column:1/-1;justify-self:start}
+.enq-success{padding:44px 24px;text-align:center;display:grid;gap:14px;place-items:center}
+.enq-success .tick{width:66px;height:66px;border-radius:50%;background:rgba(255,51,64,.12);display:grid;place-items:center;animation:pop .5s var(--ease)}
+.enq-success .tick svg{width:34px;height:34px;stroke:var(--accent)}
+.enq-success h3{font-size:1.4rem}
+.enq-success p{color:var(--muted);max-width:44ch;margin-inline:auto}
+.enq-success .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+
+.form-fallback{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+.form-note{font-size:.92rem;text-align:center;margin:0 auto;max-width:46ch}
+.chev{display:inline-flex;letter-spacing:-2px}
+.chev span{animation:chev 1.2s var(--ease) infinite}
+.chev span:nth-child(2){animation-delay:.12s}
+.chev span:nth-child(3){animation-delay:.24s}
+@keyframes chev{0%,100%{transform:translateX(0);opacity:.6}50%{transform:translateX(4px);opacity:1}}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{border-top:1px solid var(--stroke);padding:44px 0 120px;margin-top:40px}
+.footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.footer .brand{font-size:1.3rem}
+.footer-meta{color:var(--muted);font-size:.9rem;line-height:1.9;text-align:right}
+.footer-meta a:hover{color:var(--accent)}
+.copyright{margin-top:34px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--stroke);padding-top:20px}
+
+/* ============================================================
+   FLOATING ACTIONS
+   ============================================================ */
+.enq-float{
+  position:fixed;right:22px;bottom:26px;z-index:900;width:58px;height:58px;border-radius:50%;
+  background:var(--accent);color:var(--on-accent);display:grid;place-items:center;
+  box-shadow:0 16px 40px -12px rgba(255,51,64,.5);
+  transition:transform var(--dur) var(--ease);
+}
+.enq-float:hover{transform:translateY(-4px) scale(1.05)}
+.enq-float svg{width:28px;height:28px}
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;gap:0;
+  background:rgba(12,12,14,.92);backdrop-filter:blur(14px);border-top:1px solid var(--stroke);
+}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-weight:700}
+.mobile-bar .mb-call{color:var(--text)}
+.mobile-bar .mb-enq{background:var(--accent);color:var(--on-accent)}
+.mobile-bar svg{width:18px;height:18px}
+
+/* ============================================================
+   REVEAL ANIMATIONS
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid.acc-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .visit-grid{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-actions .desktop-only{display:none}
+  .brand .mark{width:52px;height:52px}
+  .footer .brand .mark{width:60px;height:60px}
+  .hero-cards{grid-template-columns:1fr}
+  .feature-card{min-height:400px}
+  .fc-car{width:56%;max-height:46%;top:8%}
+  .plans{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  :root{--nav-h:68px}
+  .grid,.grid.acc-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .footer-meta{text-align:left}
+  .footer-grid{flex-direction:column}
+  .mobile-bar{display:flex}
+  .brand{font-size:1.05rem;gap:8px}
+  .brand .mark{width:42px;height:42px}
+  .nav-actions{gap:8px}
+  .feature-card{min-height:350px;padding:26px}
+  .fc-car{width:80%;max-height:42%;top:6%}
+  .fc-content{max-width:100%}
+  .fc-content h2{font-size:clamp(1.7rem,8vw,2.2rem)}
+  .fc-content p{max-width:100%}
+  .enq-float{display:none}
+  .enq-form{grid-template-columns:1fr;padding:18px;gap:14px}
+  .searchbar{padding-left:16px;gap:6px}
+  .s-btn{padding:.72em 1em}
+  .hero h1{font-size:clamp(2rem,8.5vw,2.6rem)}
+  .hero-sub{font-size:.98rem}
+  .makes-row{gap:12px}
+  .make-tile{width:70px}
+  .make-tile .circle{width:56px;height:56px;font-size:1rem}
+  .make-tile span{font-size:.72rem}
+  .hero{padding-top:calc(var(--nav-h) + 22px)}
+  .section{padding:48px 0}
+  .sec-head{margin-bottom:26px}
+  .enquiry-frame{min-height:1100px}
+}
+@media (max-width:380px){
+  .searchbar input::placeholder{font-size:.85rem}
+  .fc-content h2{font-size:1.7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-bg" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="VOZIDEX home">
+      <img class="mark" src="assets/logo.png" alt="VOZIDEX Customs" />VOZIDEX
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#stock">Stock</a>
+      <a href="#rentals">Rentals</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost desktop-only" href="tel:+919876543210">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+        Call now
+      </a>
+      <a class="btn btn-yellow desktop-only" href="#enquiry">Enquire</a>
+      <button class="fav-btn" id="favBtn" type="button" aria-label="View saved favourites" aria-pressed="false">
+        <svg viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <span class="fav-badge" id="favBadge" aria-hidden="true">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#stock">Stock</a>
+  <a href="#rentals">Rentals</a>
+  <a href="#accessories">Accessories</a>
+  <a href="#about">About</a>
+  <a href="#visit">Visit Us</a>
+  <div class="row">
+    <a class="btn btn-ghost" href="tel:+919876543210">Call now</a>
+    <a class="btn btn-yellow" href="#enquiry">Enquire</a>
+  </div>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-orbs" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+  <img class="hero-logo-bg" src="assets/logo.png" alt="" aria-hidden="true" />
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow reveal">Rajkot · Gujarat — trusted since 2016</p>
+      <h1 id="hero-heading" class="reveal">Buy. Rent. Accessorize. <span class="accent">Cars</span></h1>
+      <p class="hero-sub reveal">VOZIDEX brings performance and luxury cars to Rajkot — buy, rent or upgrade since 2016. Every car is inspected, honestly priced and backed by full after-sales support.</p>
+
+      <form class="searchbar reveal" id="searchForm" role="search" aria-label="Search stock">
+        <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Search our stock — make, model or keyword" autocomplete="off" aria-label="Search our stock" />
+        <button type="button" class="s-clear" id="searchClear" aria-label="Clear search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button type="submit" class="btn btn-yellow s-btn">Search</button>
+      </form>
+    </div>
+
+    <div class="hero-cards">
+      <div class="feature-card fc-buy reveal">
+        <img class="fc-car" src="assets/hero-blue.png" alt="Blue Porsche 911 GT3" loading="eager" />
+        <div class="fc-content">
+          <p class="fc-eyebrow">Used car sales</p>
+          <h2>Buy a Car</h2>
+          <p>Inspected, fairly priced cars — ready to drive home this week.</p>
+          <a class="btn fc-btn-cream" href="#stock">
+            Find your next car
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="feature-card fc-rent reveal">
+        <img class="fc-car" src="assets/hero-yellow.png" alt="Yellow Porsche 911 GT3 RS" loading="eager" />
+        <div class="fc-content">
+          <p class="fc-eyebrow">Self-drive &amp; with driver</p>
+          <h2>Rent a Car</h2>
+          <p>Daily, weekly or monthly rentals for city runs and road trips.</p>
+          <a class="btn btn-yellow" href="#rentals">
+            Check rental plans
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="trust-row reveal">
+      <span><b data-count="850" data-suffix="+">850+</b> cars sold</span><span class="dot">·</span>
+      <span><b data-count="12" data-suffix="-car">12-car</b> rental fleet</span><span class="dot">·</span>
+      <span><b data-count="2000" data-suffix="+" data-comma="1">2,000+</b> happy customers</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================ FILTER RAIL ============================ -->
+<section class="wrap filter-rail" aria-label="Filter stock">
+  <div class="pill-row reveal" id="pillRow" role="group" aria-label="Filter stock by type">
+    <button class="pill active" type="button" data-filter="all" aria-pressed="true">All <span class="count" id="cAll"></span></button>
+    <button class="pill" type="button" data-filter="sale" aria-pressed="false">For Sale <span class="count" id="cSale"></span></button>
+    <button class="pill" type="button" data-filter="rent" aria-pressed="false">For Rent <span class="count" id="cRent"></span></button>
+    <button class="pill" type="button" data-filter="accessory" aria-pressed="false">Accessories <span class="count" id="cAcc"></span></button>
+  </div>
+
+  <p class="makes-label reveal">Popular makes we deal in</p>
+  <div class="makes-row reveal" id="makesRow"></div>
+</section>
+
+<!-- ============================ CURRENT STOCK ============================ -->
+<section class="section" id="stock" aria-labelledby="stock-heading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Available now</p>
+      <h2 id="stock-heading">Our Current <span class="accent">Stock</span></h2>
+      <p>Sample listing — stock changes weekly. Enquire for today's full list and fresh arrivals.</p>
+    </div>
+
+    <div class="grid" id="stockGrid"></div>
+    <p class="empty-state hidden" id="stockEmpty" role="status">No cars match those filters right now — <a href="#enquiry" class="accent">enquire for today's list</a>.</p>
+    <p class="sr-only" id="filterStatus" role="status" aria-live="polite"></p>
+
+    <div id="accessories">
+      <h3 class="acc-title reveal" id="accTitle">Accessories &amp; fitting</h3>
+      <p class="acc-sub reveal" id="accSub">Fitted in our own workshop while you wait.</p>
+      <div class="grid acc-grid" id="accGrid"></div>
+      <p class="empty-state hidden" id="accEmpty" role="status">No accessories match those filters — <a href="#enquiry" class="accent">ask us what you need</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BODY TYPES ============================ -->
+<section class="section" aria-labelledby="body-heading" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Find your shape</p>
+      <h2 id="body-heading">Browse by <span class="accent">body type</span></h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="scroller reveal" id="bodyScroller"></div>
+  </div>
+</section>
+
+<!-- ============================ RENTAL PLANS ============================ -->
+<section class="section" id="rentals" aria-labelledby="rentals-heading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Self-drive &amp; chauffeur</p>
+      <h2 id="rentals-heading">Rental <span class="accent">plans</span></h2>
+      <p>Simple daily, weekly and monthly rates. Documents needed: driving licence, ID proof and a refundable deposit.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <p class="p-name">Daily</p>
+        <p class="p-price">from ₹ 14,000<small> / day</small></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Self-drive or with driver</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>DL + ID proof + refundable deposit</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Generous local km allowance</li>
+        </ul>
+        <a class="p-tag" href="#enquiry">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="plan featured reveal">
+        <p class="p-name">Weekly</p>
+        <p class="p-price">from ₹ 80,000<small> / week</small></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Best value for road trips</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Doorstep delivery in the city</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free basic servicing included</li>
+        </ul>
+        <a class="p-tag" href="#enquiry">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="plan reveal">
+        <p class="p-name">Monthly</p>
+        <p class="p-price">from ₹ 2,80,000<small> / month</small></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lowest per-day rate</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority access to the fleet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Flexible corporate billing</li>
+        </ul>
+        <a class="p-tag" href="#enquiry">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section" id="about" aria-labelledby="about-heading">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-story reveal">
+        <p class="eyebrow">Who we are</p>
+        <h2 id="about-heading" style="font-size:clamp(1.9rem,3.6vw,3rem);margin-top:12px">Honest cars, honest paperwork</h2>
+        <p>VOZIDEX started in 2016 as a small yard on Kalawad Road with one promise — no pushy sales, no hidden history. Owner <span class="owner">Rajesh Patel</span> personally inspects every car that comes through the gate, so you only ever see stock we'd put our own family in.</p>
+        <p>Today we sell trusted used cars, run a small self-drive and chauffeur rental fleet, and fit accessories in our own workshop. Whatever you drive away in, the paperwork is clean — and the number you call after the sale is still ours.</p>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Fair, transparent pricing</h3>
+            <p>The price on the car is the price we talk about — no last-minute add-ons.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Verified vehicles</h3>
+            <p>Every car is inspected and its history checked before it reaches the yard.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+            <h3>Quick paperwork</h3>
+            <p>RC transfer, insurance and loan help — sorted without the runaround.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1Z"/></svg></div>
+            <h3>After-sales support</h3>
+            <p>Servicing, accessories and advice — we're here after you drive off too.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-tile reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-4 4-2-2-7 7"/></svg>
+        <span>Replace with shop photo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VISIT US ============================ -->
+<section class="section" id="visit" aria-labelledby="visit-heading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Come say hello</p>
+      <h2 id="visit-heading">Visit <span class="accent">us</span></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <div class="info-block">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><p class="lbl">Address</p><p class="val">Shop 7, Kalawad Road,<br>Rajkot, Gujarat 360005</p></div>
+        </div>
+        <div class="info-block">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <div><p class="lbl">Phone</p><a class="val" href="tel:+919876543210">+91 98765 43210</a></div>
+        </div>
+        <div class="info-block">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v14H7l-3 3V4Z"/><path d="M8 9h8M8 13h5"/></svg></div>
+          <div><p class="lbl">Enquiry</p><a class="val" href="#enquiry">Send us a message</a></div>
+        </div>
+        <div class="info-block">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div style="flex:1">
+            <p class="lbl">Hours</p>
+            <table class="hours-table"><tbody>
+              <tr><td>Mon – Sat</td><td>10:00 – 20:00</td></tr>
+              <tr><td>Sunday</td><td>11:00 – 17:00</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+        <a class="btn btn-yellow" href="https://www.google.com/maps/search/?api=1&query=Kalawad+Road+Rajkot" target="_blank" rel="noopener" style="align-self:flex-start">
+          Get directions
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"/><path d="M17.6 6.4 21 3l-3.4 8.6L12 22l-1.5-6.5L4 14l13.6-7.6Z"/></svg>
+        </a>
+      </div>
+      <div class="map-card reveal">
+        <iframe title="VOZIDEX location on Google Maps" src="https://www.google.com/maps?q=Kalawad%20Road%2C%20Rajkot%2C%20Gujarat&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENQUIRY ============================ -->
+<section class="section enquiry" id="enquiry" aria-labelledby="enq-heading">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:100%;text-align:center;margin-inline:auto">
+      <p class="eyebrow">One quick step</p>
+      <h2 id="enq-heading">Send us an <span class="accent">Enquiry</span></h2>
+      <p style="margin-inline:auto;max-width:560px">Tell us what you're looking for — we reply within a few hours during shop hours.</p>
+    </div>
+
+    <div class="enquiry-card reveal">
+      <!--
+        TO GO LIVE: paste your Google Form's embed URL into CONFIG.formEmbed
+        and the shareable link into CONFIG.formUrl in the script block below.
+        Embed URL looks like:
+        https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true
+      -->
+      <div id="formMount">
+        <form class="enq-form" id="enqForm" novalidate>
+          <div class="enq-field">
+            <label for="ef-name">Full name <span class="req">*</span></label>
+            <input class="enq-input" id="ef-name" name="name" type="text" required placeholder="e.g. Amit Sharma" autocomplete="name" />
+          </div>
+          <div class="enq-field">
+            <label for="ef-phone">Phone <span class="req">*</span></label>
+            <input class="enq-input" id="ef-phone" name="phone" type="tel" required placeholder="+91 90000 00000" autocomplete="tel" pattern="[0-9+ ()-]{7,}" />
+          </div>
+          <div class="enq-field">
+            <label for="ef-interest">I'm interested in</label>
+            <select class="enq-select" id="ef-interest" name="interest">
+              <option>Buying a used car</option>
+              <option>Renting a car</option>
+              <option>Accessories &amp; fitting</option>
+            </select>
+          </div>
+          <div class="enq-field">
+            <label for="ef-model">Car / model / keyword</label>
+            <input class="enq-input" id="ef-model" name="model" type="text" placeholder="e.g. BMW M4, Lamborghini, SUV" />
+          </div>
+          <div class="enq-field full">
+            <label for="ef-msg">Message</label>
+            <textarea class="enq-textarea" id="ef-msg" name="message" placeholder="Tell us your budget, timeline or any questions…"></textarea>
+          </div>
+          <!-- spam honeypot: bots fill this, humans don't -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+          <button type="submit" class="btn btn-yellow enq-submit">
+            Send enquiry
+            <span class="chev" aria-hidden="true"><span>›</span><span>›</span><span>›</span></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="form-fallback">
+        <p class="form-note muted">Prefer to talk? <a href="tel:+919876543210" class="accent">Call +91 98765 43210</a> — we reply to enquiries within a few hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="brand"><img class="mark" src="assets/logo.png" alt="VOZIDEX Customs" />VOZIDEX</a>
+        <p class="muted" style="margin-top:12px;max-width:34ch;font-size:.92rem">Used cars, rentals &amp; accessory fitting — trusted in Rajkot since 2016.</p>
+      </div>
+      <div class="footer-meta">
+        Shop 7, Kalawad Road, Rajkot, Gujarat 360005<br>
+        <a href="tel:+919876543210">+91 98765 43210</a><br>
+        Mon–Sat 10:00–20:00 · Sun 11:00–17:00
+      </div>
+    </div>
+    <p class="copyright">© 2026 VOZIDEX · All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Floating actions -->
+<a class="enq-float" href="#enquiry" aria-label="Send an enquiry">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2V4Z"/><path d="M8 9h8M8 12h5"/></svg>
+</a>
+<nav class="mobile-bar" aria-label="Quick actions">
+  <a class="mb-call" href="tel:+919876543210">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
+    Call
+  </a>
+  <a class="mb-enq" href="#enquiry">Enquire</a>
+</nav>
+
+<script src="assets/anime.min.js"></script>
+<script>
+/* ============================================================
+   CONFIG — edit these two lines to go live
+   ============================================================ */
+const CONFIG = {
+  // Enquiry form submissions are emailed to this address (delivery via formsubmit.co).
+  // NOTE: the very first submission triggers a one-time confirmation email to this
+  // address — open it once and click "Activate" so future enquiries arrive automatically.
+  enquiryEmail: "mihir.r.bhavsar1336@gmail.com"
+};
+
+const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function scrollToId(id){ const el = document.getElementById(id); if(el) el.scrollIntoView({behavior: REDUCED ? "auto" : "smooth"}); }
+
+/* ============================================================
+   INLINE SVG CAR ARTWORK
+   ============================================================ */
+const GEO = {
+  sedan:    { d:"M26 164 L26 150 C27 141 36 134 60 131 L118 128 C138 126 150 104 188 100 L262 100 C298 100 304 122 330 128 L406 132 C423 134 424 150 423 164 L355 164 A33 33 0 0 0 289 164 L153 164 A33 33 0 0 0 87 164 Z", w:[[120,164],[322,164]], r:31, glass:[150,124,190,101,258,101,300,124], pillar:224, hl:[[30,146],[416,148]] },
+  hatchback:{ d:"M26 164 L26 150 C27 140 36 133 58 130 L112 127 C132 125 146 98 190 94 L298 94 C314 94 324 112 332 138 L404 150 C418 152 420 158 419 164 L355 164 A33 33 0 0 0 289 164 L153 164 A33 33 0 0 0 87 164 Z", w:[[120,164],[322,164]], r:31, glass:[150,122,190,96,286,96,326,124], pillar:236, hl:[[30,148],[412,152]] },
+  suv:      { d:"M22 162 L22 138 C23 128 32 120 54 117 L108 114 C126 112 138 86 178 82 L322 82 C340 82 350 96 358 112 L410 118 C426 121 428 140 427 162 L360 162 A36 36 0 0 0 288 162 L154 162 A36 36 0 0 0 82 162 Z", w:[[118,162],[324,162]], r:35, glass:[144,110,182,85,316,85,350,112], pillar:238, hl:[[26,130],[420,130]] },
+  mpv:      { d:"M20 164 L20 132 C22 120 34 112 58 110 C76 108 92 92 120 86 L300 82 C330 82 342 100 360 110 L414 118 C428 121 430 140 429 164 L360 164 A35 35 0 0 0 290 164 L152 164 A35 35 0 0 0 82 164 Z", w:[[117,164],[325,164]], r:33, glass:[124,110,152,86,300,84,345,112], pillar:232, hl:[[24,128],[422,130]] },
+  sports:   { d:"M16 166 L16 150 C18 140 40 134 70 131 C96 128 120 116 150 111 L250 105 C286 103 300 120 326 127 L412 132 C428 134 432 150 430 166 L358 166 A33 33 0 0 0 292 166 L148 166 A33 33 0 0 0 82 166 Z", w:[[115,166],[325,166]], r:32, glass:[142,127,166,110,248,106,300,127], pillar:212, hl:[[24,150],[424,150]] },
+  pickup:   { d:"M22 164 L22 150 C23 140 32 133 54 130 L104 127 C124 125 136 100 176 96 L250 96 C262 96 266 108 268 120 L268 132 L430 132 C434 132 436 136 436 142 L436 164 L360 164 A34 34 0 0 0 290 164 L152 164 A34 34 0 0 0 84 164 Z", w:[[118,164],[325,164]], r:32, glass:[140,120,178,98,246,98,262,120], pillar:206, hl:[[24,150],[430,150]] }
+};
+
+function spokes(cx,cy,r){
+  let s="";
+  for(let i=0;i<5;i++){
+    const a=(i*72-90)*Math.PI/180;
+    s+=`<line x1="${cx.toFixed(1)}" y1="${cy.toFixed(1)}" x2="${(cx+Math.cos(a)*r).toFixed(1)}" y2="${(cy+Math.sin(a)*r).toFixed(1)}" stroke="#3a3d44" stroke-width="3" stroke-linecap="round"/>`;
+  }
+  return s;
+}
+
+let __carUid = 0;
+function carArt(type, opts){
+  opts = opts || {};
+  const g = GEO[type] || GEO.sedan;
+  const uid = "c"+(++__carUid);
+  const cTop = opts.cTop || "#5a5f6b";
+  const cBot = opts.cBot || "#2b2e35";
+  const rimColor = opts.rim || "#d6d8dd";
+  const stroke = opts.stroke || "rgba(0,0,0,.28)";
+  const gl = g.glass;
+  const rimR = Math.round(g.r*0.6), spokeR = g.r*0.44, hubR = Math.round(g.r*0.14);
+
+  // wheels behind (tires); rims scale with the tire so proportions stay consistent
+  let tires="", rims="";
+  g.w.forEach(([cx,cy])=>{
+    tires += `<circle cx="${cx}" cy="${cy}" r="${g.r}" fill="#0b0b0d"/>`;
+    rims  += `<circle cx="${cx}" cy="${cy}" r="${rimR}" fill="url(#rim-${uid})" stroke="#0b0b0d" stroke-width="1"/>${spokes(cx,cy,spokeR)}<circle cx="${cx}" cy="${cy}" r="${hubR}" fill="#101114"/>`;
+  });
+
+  // high rear wing sits BEHIND the body (rises above the roofline)
+  let wingBehind = "";
+  // ducktail lip is drawn AFTER the body so it grows out of the rear deck
+  let wingFront = "";
+  if(type==="sports" && opts.wing){
+    if(opts.wing==="high"){
+      wingBehind = `<path d="M356 92 L364 128 M414 90 L408 126" stroke="#0d0d0f" stroke-width="7" stroke-linecap="round"/>`
+                 + `<rect x="346" y="78" width="96" height="12" rx="4" fill="#0d0d0f"/>`
+                 + `<rect x="344" y="76" width="8" height="16" rx="2" fill="#0d0d0f"/><rect x="436" y="76" width="8" height="16" rx="2" fill="#0d0d0f"/>`;
+    } else {
+      wingFront = `<path d="M352 134 Q386 115 416 121 L423 131 Q390 129 357 140 Z" fill="${cBot}" stroke="${stroke}" stroke-width="1.5" stroke-linejoin="round"/>`;
+    }
+  }
+
+  return `<svg class="car-svg" viewBox="0 0 440 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="body-${uid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="${cTop}"/><stop offset="1" stop-color="${cBot}"/>
+      </linearGradient>
+      <radialGradient id="rim-${uid}" cx="0.4" cy="0.35" r="0.75">
+        <stop offset="0" stop-color="${rimColor}"/><stop offset="1" stop-color="#16171b"/>
+      </radialGradient>
+      <radialGradient id="sh-${uid}" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="rgba(0,0,0,.5)"/><stop offset="1" stop-color="rgba(0,0,0,0)"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="222" cy="193" rx="182" ry="11" fill="url(#sh-${uid})"/>
+    ${tires}
+    ${wingBehind}
+    <path d="${g.d}" fill="url(#body-${uid})" stroke="${stroke}" stroke-width="1.5" stroke-linejoin="round"/>
+    ${wingFront}
+    <polygon points="${gl[0]},${gl[1]} ${gl[2]},${gl[3]} ${gl[4]},${gl[5]} ${gl[6]},${gl[7]}" fill="#12141b" opacity=".82"/>
+    <line x1="${g.pillar}" y1="${gl[3]-1}" x2="${g.pillar}" y2="${gl[7]}" stroke="rgba(0,0,0,.4)" stroke-width="3"/>
+    <line x1="${gl[2]}" y1="${gl[3]}" x2="${gl[4]}" y2="${gl[5]}" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+    <ellipse cx="${g.hl[0][0]}" cy="${g.hl[0][1]}" rx="7" ry="5" fill="#fff2c0" stroke="rgba(0,0,0,.42)" stroke-width="1"/>
+    <ellipse cx="${g.hl[1][0]}" cy="${g.hl[1][1]}" rx="6" ry="5" fill="#ff5a4d" stroke="rgba(0,0,0,.3)" stroke-width="1"/>
+    ${rims}
+  </svg>`;
+}
+
+/* ============================================================
+   DATA
+   ============================================================ */
+const STOCK = [
+  { name:"Lamborghini Huracán 2021", make:"LA", type:"sale", body:"coupe", img:"car-huracan", price:"₹ 2,95,00,000", rating:"5.0", specs:["2 Seats","8,900 km","Petrol"] },
+  { name:"Ferrari LaFerrari 2018", make:"FE", type:"sale", body:"coupe", img:"car-laferrari", price:"₹ 19,50,00,000", rating:"5.0", specs:["2 Seats","3,200 km","Hybrid"] },
+  { name:"Chevrolet Corvette Z06 2023", make:"CH", type:"sale", body:"coupe", img:"car-z06", price:"₹ 1,45,00,000", rating:"4.8", specs:["2 Seats","6,500 km","Petrol"] },
+  { name:"Chevrolet Corvette Stingray 2022", make:"CH", type:"sale", body:"coupe", img:"car-stingray", price:"₹ 92,00,000", rating:"4.7", specs:["2 Seats","12,800 km","Petrol"] },
+  { name:"BMW M5 Competition 2021", make:"BM", type:"sale", body:"sedan", img:"car-m5", price:"₹ 84,00,000", rating:"4.8", specs:["5 Seats","22,300 km","Petrol"] },
+  { name:"BMW M3 2022", make:"BM", type:"rent", body:"sedan", img:"car-m3", pricePer:"day", price:"₹ 14,000", rating:"4.9", specs:["5 Seats","Self-drive","Petrol"] },
+  { name:"Lamborghini Huracán 2020", make:"LA", type:"rent", body:"coupe", img:"car-huracan", pricePer:"day", price:"₹ 35,000", rating:"4.9", specs:["2 Seats","Self-drive","Petrol"] },
+  { name:"Chevrolet Corvette Z06 2022", make:"CH", type:"rent", body:"coupe", img:"car-z06", pricePer:"day", price:"₹ 22,000", rating:"4.8", specs:["2 Seats","Self-drive","Petrol"] }
+];
+
+const ACCESSORIES = [
+  { name:"Android Stereo 9″", price:"₹ 8,999", icon:"stereo" },
+  { name:"Alloy Wheels 15″", price:"₹ 22,000", icon:"wheel" },
+  { name:"Leatherette Seat Covers", price:"₹ 6,500", icon:"seat" },
+  { name:"LED Headlamp Kit", price:"₹ 3,200", icon:"lamp" }
+];
+
+const MAKES = [
+  { mono:"BM", label:"BMW" }, { mono:"LA", label:"Lamborghini" },
+  { mono:"FE", label:"Ferrari" }, { mono:"CH", label:"Chevrolet" }
+];
+
+const BODY_TYPES = [
+  { key:"coupe", name:"Coupe", img:"car-z06" },
+  { key:"sedan", name:"Sedan", img:"car-m5" }
+];
+
+/* Accessory SVG icons */
+function accIcon(kind){
+  const base = 'fill="none" stroke="#FF3340" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"';
+  const cars = {
+    stereo:`<svg viewBox="0 0 96 96" ${base}><rect x="10" y="24" width="76" height="48" rx="8"/><rect x="18" y="34" width="30" height="28" rx="4"/><circle cx="66" cy="42" r="7"/><circle cx="66" cy="42" r="1.5" fill="#FF3340"/><path d="M60 62h14"/></svg>`,
+    wheel:`<svg viewBox="0 0 96 96" ${base}><circle cx="48" cy="48" r="34"/><circle cx="48" cy="48" r="9"/><path d="M48 14v18M48 64v18M14 48h18M64 48h18M26 26l12 12M58 58l12 12M70 26 58 38M38 58 26 70"/></svg>`,
+    seat:`<svg viewBox="0 0 96 96" ${base}><path d="M30 20a8 8 0 0 1 8 8v26h22a8 8 0 0 1 8 8v12"/><path d="M30 54H24a6 6 0 0 0-6 6v14M38 54h22"/><path d="M30 20a8 8 0 0 0-8 8v18"/></svg>`,
+    lamp:`<svg viewBox="0 0 96 96" ${base}><path d="M20 34c0-6 5-10 14-10h10c14 0 22 10 22 24s-8 24-22 24H34c-9 0-14-4-14-10Z"/><path d="M70 40h12M70 48h16M70 56h12"/></svg>`
+  };
+  return cars[kind] || cars.stereo;
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const heartSvg = '<svg viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>';
+const chipIcons = {
+  seat:'<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a2 2 0 0 1 2-2h1V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4h1a2 2 0 0 1 2 2v6"/></svg>',
+  km:'<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 1.6 5"/><path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-1.6 5"/></svg>',
+  fuel:'<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14M3 20h12M13 10h3a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0 2-2V8l-3-3"/></svg>',
+  fit:'<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+};
+function specChip(text){
+  let ic = chipIcons.seat;
+  if(/km/i.test(text)) ic = chipIcons.km;
+  else if(/petrol|diesel|electric|cng|hybrid/i.test(text)) ic = chipIcons.fuel;
+  else if(/driver|self|km|seat/i.test(text) && !/seat/i.test(text)) ic = chipIcons.km;
+  else if(/seat/i.test(text)) ic = chipIcons.seat;
+  else ic = chipIcons.fit;
+  return `<span class="chip">${ic}${text}</span>`;
+}
+
+function carCard(item){
+  const isRent = item.type === "rent";
+  const priceHtml = item.pricePer ? `${item.price}<small> / ${item.pricePer}</small>` : item.price;
+  const statusCls = isRent ? "rent" : "sale";
+  const statusTxt = isRent ? "For Rent" : "For Sale";
+  const media = `<img class="car-photo" src="assets/${item.img}.png" alt="${item.name}" loading="lazy" />`;
+  const chips = item.specs.map(specChip).join("");
+  return `<article class="card car-card reveal" data-type="${item.type}" data-body="${item.body}" data-make="${item.make}" data-name="${item.name.toLowerCase()}">
+    <div class="card-top">
+      <div>
+        <h3>${item.name}</h3>
+        <div class="price-row"><span class="price">${priceHtml}</span><span class="rating"><span class="star">★</span>${item.rating}</span></div>
+      </div>
+      <button class="fav" aria-label="Save ${item.name} to favourites" aria-pressed="false">${heartSvg}</button>
+    </div>
+    <div class="card-media">${media}</div>
+    <div class="chips">${chips}</div>
+    <div class="status ${statusCls}"><span class="dot"></span>${statusTxt}</div>
+    <a class="enquire-pill" href="#enquiry">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M9 6l6 6-6 6"/></svg></a>
+  </article>`;
+}
+
+function accCard(item){
+  return `<article class="card acc-card reveal" data-type="accessory" data-name="${item.name.toLowerCase()}">
+    <div class="card-top">
+      <div>
+        <h3>${item.name}</h3>
+        <div class="price-row"><span class="price">${item.price}</span></div>
+      </div>
+      <button class="fav" aria-label="Save ${item.name} to favourites" aria-pressed="false">${heartSvg}</button>
+    </div>
+    <div class="card-media acc-media">${accIcon(item.icon)}</div>
+    <div class="chips"><span class="chip">${chipIcons.fit}Fitted in-shop</span></div>
+    <div class="status acc"><span class="dot"></span>Accessory</div>
+    <a class="enquire-pill" href="#enquiry">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M9 6l6 6-6 6"/></svg></a>
+  </article>`;
+}
+
+/* Mount grids */
+document.getElementById("stockGrid").innerHTML = STOCK.map(carCard).join("");
+document.getElementById("accGrid").innerHTML = ACCESSORIES.map(accCard).join("");
+
+/* Makes row */
+document.getElementById("makesRow").innerHTML = MAKES.map(m =>
+  `<button type="button" class="make-tile" data-make="${m.mono}" aria-label="Show ${m.label} stock"><span class="circle">${m.mono}</span><span>${m.label}</span></button>`
+).join("");
+
+/* Body type cards */
+document.getElementById("bodyScroller").innerHTML = BODY_TYPES.map(b =>
+  `<div class="body-card" data-body="${b.key}" role="button" tabindex="0" aria-label="Show ${b.name}">
+     <div class="bc-car"><img class="bc-photo" src="assets/${b.img}.png" alt="${b.name}" loading="lazy" /></div>
+     <span class="bc-name">${b.name}</span>
+     <span class="bc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+   </div>`
+).join("");
+
+
+/* ============================================================
+   FILTERING (pills + search + body type)
+   ============================================================ */
+const state = { category:"all", body:null, make:null, query:"", favOnly:false };
+const carCards = () => Array.from(document.querySelectorAll(".car-card"));
+const accCards = () => Array.from(document.querySelectorAll(".acc-card"));
+const stockGrid = document.getElementById("stockGrid");
+const accGrid = document.getElementById("accGrid");
+const stockEmpty = document.getElementById("stockEmpty");
+const accEmpty = document.getElementById("accEmpty");
+const accTitle = document.getElementById("accTitle");
+const accSub = document.getElementById("accSub");
+const filterStatus = document.getElementById("filterStatus");
+
+const STOCK_EMPTY_HTML = "No cars match those filters right now — <a href=\"#enquiry\" class=\"accent\">enquire for today's list</a>.";
+const FAV_EMPTY_HTML = "No saved favourites yet — tap the heart on any card to save it.";
+
+function applyFilters(){
+  const q = state.query.trim();
+  let carsShown = 0, accShown = 0;
+
+  // Favourites-only view (nav heart) overrides the other filters
+  if(state.favOnly){
+    carCards().forEach(c=>{ const s = favSet.has(c.dataset.name); c.classList.toggle("hidden", !s); if(s) carsShown++; });
+    accCards().forEach(c=>{ const s = favSet.has(c.dataset.name); c.classList.toggle("hidden", !s); if(s) accShown++; });
+    const showAcc = accShown > 0;
+    accTitle.style.display = showAcc ? "" : "none";
+    accSub.style.display = showAcc ? "" : "none";
+    accGrid.style.display = showAcc ? "" : "none";
+    accEmpty.classList.add("hidden");
+    const total = carsShown + accShown;
+    if(total === 0){ stockEmpty.innerHTML = FAV_EMPTY_HTML; stockEmpty.classList.remove("hidden"); stockGrid.style.display = "none"; }
+    else { stockEmpty.classList.add("hidden"); stockGrid.style.display = ""; }
+    filterStatus.textContent = total === 0 ? "No favourites saved yet." : ("Showing " + total + " saved favourite" + (total===1?"":"s") + ".");
+    return;
+  }
+
+  carCards().forEach(card=>{
+    const t = card.dataset.type;
+    const matchCat = state.category === "all" ? true
+                   : state.category === "accessory" ? false
+                   : t === state.category;
+    const matchBody = !state.body || card.dataset.body === state.body;
+    const matchMake = !state.make || card.dataset.make === state.make;
+    const matchQ = !q || card.dataset.name.includes(q);
+    const show = matchCat && matchBody && matchMake && matchQ;
+    card.classList.toggle("hidden", !show);
+    if(show) carsShown++;
+  });
+
+  const showAccessories = (state.category === "all" || state.category === "accessory") && !state.body && !state.make;
+  accCards().forEach(card=>{
+    const matchQ = !q || card.dataset.name.includes(q);
+    const show = showAccessories && matchQ;
+    card.classList.toggle("hidden", !show);
+    if(show) accShown++;
+  });
+
+  const carsExpected = state.category !== "accessory";
+  // Don't show the stock "no results" panel if the query matched accessories instead
+  const showStockEmpty = carsExpected && carsShown === 0 && !(q && accShown > 0);
+  if(showStockEmpty){ stockEmpty.innerHTML = STOCK_EMPTY_HTML; stockEmpty.classList.remove("hidden"); stockGrid.style.display = "none"; }
+  else { stockEmpty.classList.add("hidden"); stockGrid.style.display = ""; }
+
+  const accBlockVisible = showAccessories;
+  accTitle.style.display = accBlockVisible ? "" : "none";
+  accSub.style.display = accBlockVisible ? "" : "none";
+  accGrid.style.display = accBlockVisible ? "" : "none";
+  // Don't show the accessory "no results" panel if the query matched cars instead
+  const showAccEmpty = accBlockVisible && accShown === 0 && !(q && carsShown > 0);
+  accEmpty.classList.toggle("hidden", !showAccEmpty);
+
+  // Announce result counts to assistive tech (polite)
+  const parts = [];
+  if(carsExpected) parts.push(carsShown + " car" + (carsShown===1?"":"s"));
+  if(accBlockVisible) parts.push(accShown + " accessor" + (accShown===1?"y":"ies"));
+  filterStatus.textContent = parts.length ? ("Showing " + parts.join(" and ") + ".") : "";
+}
+
+/* Pills */
+const pills = Array.from(document.querySelectorAll(".pill"));
+function setActivePill(filter){
+  pills.forEach(x=>{ const on = x.dataset.filter === filter; x.classList.toggle("active", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
+}
+pills.forEach(p=>{
+  p.addEventListener("click", ()=>{
+    exitFavView();
+    state.category = p.dataset.filter;
+    state.body = null; state.make = null; // category is a fresh filter
+    setActivePill(state.category);
+    applyFilters();
+  });
+});
+
+/* Counts on pills */
+document.getElementById("cAll").textContent  = STOCK.length + ACCESSORIES.length;
+document.getElementById("cSale").textContent = STOCK.filter(s=>s.type==="sale").length;
+document.getElementById("cRent").textContent = STOCK.filter(s=>s.type==="rent").length;
+document.getElementById("cAcc").textContent  = ACCESSORIES.length;
+
+/* Body type cards filter the stock */
+function selectBody(key){
+  exitFavView();
+  state.body = key; state.category = "all"; state.make = null;
+  setActivePill("all");
+  applyFilters();
+  scrollToId("stock");
+}
+document.querySelectorAll(".body-card").forEach(bc=>{
+  const go = ()=> selectBody(bc.dataset.body);
+  bc.addEventListener("click", go);
+  bc.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); }});
+});
+
+/* Popular makes filter the stock */
+function selectMake(mono){
+  exitFavView();
+  state.make = mono; state.category = "all"; state.body = null;
+  setActivePill("all");
+  applyFilters();
+  scrollToId("stock");
+}
+document.querySelectorAll(".make-tile").forEach(mt=>{
+  mt.addEventListener("click", ()=> selectMake(mt.dataset.make));
+});
+
+/* Search */
+const searchInput = document.getElementById("searchInput");
+const searchClear = document.getElementById("searchClear");
+const searchForm = document.getElementById("searchForm");
+searchInput.addEventListener("input", ()=>{
+  exitFavView();
+  state.query = searchInput.value.toLowerCase();
+  searchClear.classList.toggle("show", searchInput.value.length>0);
+  applyFilters();
+});
+searchClear.addEventListener("click", ()=>{
+  searchInput.value=""; state.query=""; searchClear.classList.remove("show");
+  applyFilters(); searchInput.focus();
+});
+searchForm.addEventListener("submit", e=>{
+  e.preventDefault();
+  applyFilters();
+  scrollToId("stock");
+});
+
+applyFilters();
+
+/* ============================================================
+   FAVOURITES
+   ============================================================ */
+const favBadge = document.getElementById("favBadge");
+const favBtn = document.getElementById("favBtn");
+let favSet = new Set();
+try{ favSet = new Set(JSON.parse(localStorage.getItem("vozidex_favs")||"[]")); }catch(e){ favSet = new Set(); }
+
+// Reconcile saved favourites against current inventory so removed items can't inflate the badge
+const knownNames = new Set(Array.from(document.querySelectorAll(".card")).map(c=>c.dataset.name));
+favSet = new Set([...favSet].filter(n=>knownNames.has(n)));
+
+function saveFavs(){ try{ localStorage.setItem("vozidex_favs", JSON.stringify([...favSet])); }catch(e){} }
+function updateBadge(){
+  const n = favSet.size;
+  favBadge.textContent = n;
+  favBadge.classList.toggle("show", n>0);
+  favBtn.setAttribute("aria-label", n>0 ? ("View " + n + " saved favourite" + (n===1?"":"s")) : "View saved favourites");
+}
+function syncFavUI(){
+  document.querySelectorAll(".card").forEach(card=>{
+    const on = favSet.has(card.dataset.name);
+    const btn = card.querySelector(".fav");
+    btn.classList.toggle("on", on);
+    btn.setAttribute("aria-pressed", on?"true":"false");
+  });
+}
+function exitFavView(){
+  if(!state.favOnly) return;
+  state.favOnly = false;
+  favBtn.setAttribute("aria-pressed", "false");
+}
+document.querySelectorAll(".fav").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    const card = btn.closest(".card");
+    const name = card.dataset.name;
+    if(favSet.has(name)) favSet.delete(name);
+    else favSet.add(name);
+    btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop");
+    saveFavs(); updateBadge(); syncFavUI();
+    if(state.favOnly) applyFilters(); // keep the favourites view in sync when unsaving from within it
+  });
+});
+saveFavs(); updateBadge(); syncFavUI();
+
+favBtn.addEventListener("click", ()=>{
+  state.favOnly = !state.favOnly;
+  favBtn.setAttribute("aria-pressed", state.favOnly ? "true" : "false");
+  if(state.favOnly){
+    state.category = "all"; state.body = null; state.make = null;
+    state.query = ""; searchInput.value = ""; searchClear.classList.remove("show");
+    setActivePill("all");
+  }
+  applyFilters();
+  scrollToId("stock");
+});
+
+/* ============================================================
+   NAVBAR SCROLL + MOBILE MENU
+   ============================================================ */
+const nav = document.getElementById("nav");
+const onScroll = ()=> nav.classList.toggle("scrolled", window.scrollY>20);
+window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+mobileMenu.setAttribute("inert", ""); // closed by default: keep its links out of the tab order / AT tree
+function toggleMenu(force){
+  const open = force!==undefined ? force : !mobileMenu.classList.contains("open");
+  mobileMenu.classList.toggle("open", open);
+  hamburger.classList.toggle("open", open);
+  hamburger.setAttribute("aria-expanded", open?"true":"false");
+  if(open) mobileMenu.removeAttribute("inert"); else mobileMenu.setAttribute("inert", "");
+}
+hamburger.addEventListener("click", ()=> toggleMenu());
+mobileMenu.querySelectorAll("a").forEach(a=> a.addEventListener("click", ()=> toggleMenu(false)));
+
+/* ============================================================
+   ENQUIRY FORM — emails submissions to CONFIG.enquiryEmail (via formsubmit.co)
+   ============================================================ */
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+
+const enqForm = document.getElementById("enqForm");
+const formMount = document.getElementById("formMount");
+
+function enqSuccess(firstName){
+  formMount.innerHTML =
+    `<div class="enq-success">
+       <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+       <h3>Thanks, ${firstName}!</h3>
+       <p>Your enquiry has been sent to our team. We'll get back to you within a few hours during shop hours.</p>
+       <div class="row"><a class="btn btn-ghost" href="tel:+919876543210">Call the shop</a></div>
+     </div>`;
+}
+
+if(enqForm){
+  enqForm.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const nameEl = document.getElementById("ef-name");
+    const phoneEl = document.getElementById("ef-phone");
+    if(!nameEl.value.trim()){ nameEl.focus(); return; }
+    if(!phoneEl.value.trim()){ phoneEl.focus(); return; }
+    const firstName = escapeHtml(nameEl.value.trim().split(" ")[0] || "there");
+    const btn = enqForm.querySelector(".enq-submit");
+    const original = btn.innerHTML;
+    btn.disabled = true; btn.textContent = "Sending…";
+
+    const data = new FormData(enqForm);
+    data.append("_subject", "New VOZIDEX enquiry — " + nameEl.value.trim());
+    data.append("_template", "table");
+    data.append("_captcha", "false");
+
+    try{
+      const res = await fetch("https://formsubmit.co/ajax/" + CONFIG.enquiryEmail, {
+        method:"POST", headers:{ "Accept":"application/json" }, body:data
+      });
+      const json = await res.json().catch(()=>({}));
+      if(res.ok && (json.success === true || json.success === "true")){
+        enqSuccess(firstName);
+      }else{
+        throw new Error("submit failed");
+      }
+    }catch(err){
+      // Fallback: open the visitor's mail app pre-addressed to us
+      const body = "Name: " + nameEl.value + "\nPhone: " + phoneEl.value
+        + "\nInterested in: " + document.getElementById("ef-interest").value
+        + "\nCar/keyword: " + document.getElementById("ef-model").value
+        + "\n\n" + document.getElementById("ef-msg").value;
+      window.location.href = "mailto:" + CONFIG.enquiryEmail
+        + "?subject=" + encodeURIComponent("VOZIDEX enquiry")
+        + "&body=" + encodeURIComponent(body);
+      btn.disabled = false; btn.innerHTML = original;
+    }
+  });
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+if(REDUCED){
+  document.querySelectorAll(".reveal").forEach(el=> el.classList.add("in"));
+}else{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        const sibs = Array.from(el.parentElement.children).filter(c=>c.classList.contains("reveal"));
+        const idx = sibs.indexOf(el);
+        el.style.transitionDelay = Math.min(idx,6)*60 + "ms";
+        el.classList.add("in");
+        io.unobserve(el);
+      }
+    });
+  }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+}
+
+/* ============================================================
+   EFFECTS (anime.js) — all additive & guarded
+   ============================================================ */
+const HAS_ANIME = (typeof anime !== "undefined");
+
+/* Animated count-up stats in the hero trust row */
+(function(){
+  const nums = document.querySelectorAll("[data-count]");
+  const fmt = (n, comma)=> comma ? Math.round(n).toLocaleString("en-IN") : String(Math.round(n));
+  nums.forEach(el=>{
+    const target = +el.dataset.count, suffix = el.dataset.suffix || "", comma = el.dataset.comma === "1";
+    if(REDUCED || !HAS_ANIME){ el.textContent = fmt(target, comma) + suffix; return; }
+    const io = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){
+        const obj = {v:0};
+        anime({ targets:obj, v:target, round:1, duration:1600, easing:"easeOutExpo",
+          update:()=>{ el.textContent = fmt(obj.v, comma) + suffix; } });
+        io.unobserve(el);
+      }});
+    }, {threshold:0.6});
+    io.observe(el);
+  });
+})();
+
+/* Drifting hero glow orbs + gentle enquiry-button pulse */
+if(HAS_ANIME && !REDUCED){
+  anime({targets:".o1", translateX:[-20,50], translateY:[-10,40], scale:[1,1.18], direction:"alternate", loop:true, duration:9000, easing:"easeInOutSine"});
+  anime({targets:".o2", translateX:[10,-50], translateY:[0,50], scale:[1,1.22], direction:"alternate", loop:true, duration:11000, easing:"easeInOutSine"});
+  anime({targets:".o3", translateX:[0,40], translateY:[10,-30], scale:[1,1.15], direction:"alternate", loop:true, duration:13000, easing:"easeInOutSine"});
+  anime({targets:".enq-float",
+    boxShadow:["0 16px 40px -12px rgba(255,51,64,.5)","0 22px 56px -6px rgba(255,51,64,.9)"],
+    direction:"alternate", loop:true, duration:1500, easing:"easeInOutQuad"});
+}
+
+/* 3D tilt on the hero feature cards (pointer devices only) */
+if(!REDUCED && window.matchMedia("(hover:hover)").matches){
+  document.querySelectorAll(".feature-card").forEach(card=>{
+    card.addEventListener("mousemove", e=>{
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left)/r.width - 0.5, py = (e.clientY - r.top)/r.height - 0.5;
+      card.style.transition = "transform .1s ease-out";
+      card.style.transform = `perspective(900px) rotateX(${(-py*5).toFixed(2)}deg) rotateY(${(px*6).toFixed(2)}deg) translateY(-6px)`;
+    });
+    card.addEventListener("mouseleave", ()=>{ card.style.transition = ""; card.style.transform = ""; });
+  });
+}
+</script>
+</body>
+</html>

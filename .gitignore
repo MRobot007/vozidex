@@ -1,0 +1,9 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Raw source photos — the live site uses the processed cut-outs in /assets
+/*.jpg
+/*.jpeg
+/Untitled design.png
