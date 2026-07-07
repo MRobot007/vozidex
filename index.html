@@ -1087,7 +1087,11 @@ const CONFIG = {
   // Enquiry form submissions are emailed to this address (delivery via formsubmit.co).
   // NOTE: the very first submission triggers a one-time confirmation email to this
   // address — open it once and click "Activate" so future enquiries arrive automatically.
-  enquiryEmail: "mihir.r.bhavsar1336@gmail.com"
+  enquiryEmail: "mihir.r.bhavsar1336@gmail.com",
+
+  // CRM lead-capture endpoint. Every enquiry is also pushed here as a new lead.
+  // Live CRM on Vercel (backed by Railway MySQL):
+  crmEndpoint: "https://garage-crm-tawny.vercel.app/api/leads"
 };
 
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1536,6 +1540,29 @@ function enqSuccess(firstName){
      </div>`;
 }
 
+/* Push the enquiry into the CRM as a new lead (source = Website).
+   Returns true on success. Best-effort: never blocks the visitor's flow. */
+async function postLeadToCrm(){
+  if(!CONFIG.crmEndpoint) return false;
+  const interest = document.getElementById("ef-interest").value;
+  const model = document.getElementById("ef-model").value.trim();
+  const message = document.getElementById("ef-msg").value.trim();
+  const interestedIn = [interest, model].filter(Boolean).join(" — ");
+  const payload = {
+    name: document.getElementById("ef-name").value.trim(),
+    phone: document.getElementById("ef-phone").value.trim(),
+    interestedIn: interestedIn || undefined,
+    source: "Website",
+    notes: message || undefined
+  };
+  const res = await fetch(CONFIG.crmEndpoint, {
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify(payload)
+  });
+  return res.ok;
+}
+
 if(enqForm){
   enqForm.addEventListener("submit", async (e)=>{
     e.preventDefault();
@@ -1544,27 +1571,39 @@ if(enqForm){
     if(!nameEl.value.trim()){ nameEl.focus(); return; }
     if(!phoneEl.value.trim()){ phoneEl.focus(); return; }
     const firstName = escapeHtml(nameEl.value.trim().split(" ")[0] || "there");
+
+    // Honeypot: silently accept bots without notifying anyone or creating a lead.
+    const honey = enqForm.querySelector('[name="_honey"]');
+    if(honey && honey.value){ enqSuccess(firstName); return; }
+
     const btn = enqForm.querySelector(".enq-submit");
     const original = btn.innerHTML;
     btn.disabled = true; btn.textContent = "Sending…";
 
+    // 1) Capture the lead in the CRM (best-effort — a failure here won't block).
+    let crmOk = false;
+    try{ crmOk = await postLeadToCrm(); }
+    catch(err){ console.warn("CRM lead capture failed:", err); }
+
+    // 2) Email a copy to the shop via formsubmit.co.
+    let mailOk = false;
     const data = new FormData(enqForm);
     data.append("_subject", "New VOZIDEX enquiry — " + nameEl.value.trim());
     data.append("_template", "table");
     data.append("_captcha", "false");
-
     try{
       const res = await fetch("https://formsubmit.co/ajax/" + CONFIG.enquiryEmail, {
         method:"POST", headers:{ "Accept":"application/json" }, body:data
       });
       const json = await res.json().catch(()=>({}));
-      if(res.ok && (json.success === true || json.success === "true")){
-        enqSuccess(firstName);
-      }else{
-        throw new Error("submit failed");
-      }
-    }catch(err){
-      // Fallback: open the visitor's mail app pre-addressed to us
+      mailOk = res.ok && (json.success === true || json.success === "true");
+    }catch(err){ /* handled below */ }
+
+    // Success if the lead landed anywhere (CRM or email).
+    if(crmOk || mailOk){
+      enqSuccess(firstName);
+    }else{
+      // Last resort: open the visitor's mail app pre-addressed to us.
       const body = "Name: " + nameEl.value + "\nPhone: " + phoneEl.value
         + "\nInterested in: " + document.getElementById("ef-interest").value
         + "\nCar/keyword: " + document.getElementById("ef-model").value
