@@ -1015,6 +1015,10 @@ section{scroll-margin-top:90px}
             <input class="enq-input" id="ef-phone" name="phone" type="tel" required placeholder="+91 90000 00000" autocomplete="tel" pattern="[0-9+ ()-]{7,}" />
           </div>
           <div class="enq-field">
+            <label for="ef-email">Email</label>
+            <input class="enq-input" id="ef-email" name="email" type="email" placeholder="you@email.com — we'll confirm availability" autocomplete="email" />
+          </div>
+          <div class="enq-field">
             <label for="ef-interest">I'm interested in</label>
             <select class="enq-select" id="ef-interest" name="interest">
               <option>Buying a used car</option>
@@ -1025,6 +1029,12 @@ section{scroll-margin-top:90px}
           <div class="enq-field">
             <label for="ef-model">Car / model / keyword</label>
             <input class="enq-input" id="ef-model" name="model" type="text" placeholder="e.g. BMW M4, Lamborghini, SUV" />
+          </div>
+          <div class="enq-field">
+            <label for="ef-accessory">Accessory you're after (optional)</label>
+            <select class="enq-select" id="ef-accessory" name="accessory">
+              <option value="">— none / just browsing —</option>
+            </select>
           </div>
           <div class="enq-field full">
             <label for="ef-msg">Message</label>
@@ -1091,7 +1101,14 @@ const CONFIG = {
 
   // CRM lead-capture endpoint. Every enquiry is also pushed here as a new lead.
   // Live CRM on Vercel (backed by Railway MySQL):
-  crmEndpoint: "https://garage-crm-tawny.vercel.app/api/leads"
+  crmEndpoint: "https://garage-crm-tawny.vercel.app/api/leads",
+
+  // Public list of in-stock accessories (from the CRM) shown in the enquiry form.
+  accessoriesEndpoint: "https://garage-crm-tawny.vercel.app/api/public/accessories",
+
+  // Used in the automatic confirmation email when a customer picks an accessory.
+  shopHours: "Mon–Sat, 10:00 AM – 8:00 PM",
+  shopAddress: "VOZIDEX, Rajkot, Gujarat"
 };
 
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1546,14 +1563,20 @@ async function postLeadToCrm(){
   if(!CONFIG.crmEndpoint) return false;
   const interest = document.getElementById("ef-interest").value;
   const model = document.getElementById("ef-model").value.trim();
+  const accEl = document.getElementById("ef-accessory");
+  const emailEl = document.getElementById("ef-email");
+  const accessory = accEl ? accEl.value : "";
+  const email = emailEl ? emailEl.value.trim() : "";
   const message = document.getElementById("ef-msg").value.trim();
-  const interestedIn = [interest, model].filter(Boolean).join(" — ");
+  const interestedIn = [interest, model, accessory ? ("Accessory: " + accessory) : ""].filter(Boolean).join(" — ");
+  const notes = [message, email ? ("Email: " + email) : ""].filter(Boolean).join("\n");
   const payload = {
     name: document.getElementById("ef-name").value.trim(),
     phone: document.getElementById("ef-phone").value.trim(),
+    email: email || undefined,
     interestedIn: interestedIn || undefined,
     source: "Website",
-    notes: message || undefined
+    notes: notes || undefined
   };
   const res = await fetch(CONFIG.crmEndpoint, {
     method:"POST",
@@ -1562,6 +1585,25 @@ async function postLeadToCrm(){
   });
   return res.ok;
 }
+
+/* Populate the accessory dropdown from the CRM's public, in-stock list. */
+async function loadAccessories(){
+  const sel = document.getElementById("ef-accessory");
+  if(!sel || !CONFIG.accessoriesEndpoint) return;
+  try{
+    const res = await fetch(CONFIG.accessoriesEndpoint);
+    if(!res.ok) return;
+    const json = await res.json();
+    const list = (json && json.data) || [];
+    list.forEach(function(a){
+      const opt = document.createElement("option");
+      opt.value = a.name;
+      opt.textContent = a.name;
+      sel.appendChild(opt);
+    });
+  }catch(err){ /* leave the default "none" option only */ }
+}
+loadAccessories();
 
 if(enqForm){
   enqForm.addEventListener("submit", async (e)=>{
@@ -1591,6 +1633,19 @@ if(enqForm){
     data.append("_subject", "New VOZIDEX enquiry — " + nameEl.value.trim());
     data.append("_template", "table");
     data.append("_captcha", "false");
+
+    // Auto-reply to the customer when they picked an accessory we stock.
+    const accVal = (document.getElementById("ef-accessory") || {}).value || "";
+    const emailVal = (document.getElementById("ef-email") || {}).value || "";
+    if(accVal && emailVal.trim()){
+      data.append("_autoresponse",
+        "Hi " + (nameEl.value.trim().split(" ")[0] || "there") + ",\n\n" +
+        "Thanks for your enquiry with VOZIDEX! Good news — the \"" + accVal +
+        "\" you're interested in is available at our shop.\n\n" +
+        "Feel free to drop by anytime during our hours:\n" +
+        CONFIG.shopHours + "\n" + CONFIG.shopAddress + "\n\n" +
+        "See you soon!\n— Team VOZIDEX");
+    }
     try{
       const res = await fetch("https://formsubmit.co/ajax/" + CONFIG.enquiryEmail, {
         method:"POST", headers:{ "Accept":"application/json" }, body:data
