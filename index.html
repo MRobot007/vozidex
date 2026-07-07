@@ -1612,6 +1612,15 @@ if(enqForm){
     const phoneEl = document.getElementById("ef-phone");
     if(!nameEl.value.trim()){ nameEl.focus(); return; }
     if(!phoneEl.value.trim()){ phoneEl.focus(); return; }
+    // If they picked an accessory, we need their email to send the confirmation.
+    const accSel = document.getElementById("ef-accessory");
+    const emailField = document.getElementById("ef-email");
+    if(accSel && accSel.value && emailField && !emailField.value.trim()){
+      emailField.focus();
+      emailField.style.borderColor = "#ff5a5a";
+      emailField.setAttribute("placeholder", "Add your email so we can confirm availability →");
+      return;
+    }
     const firstName = escapeHtml(nameEl.value.trim().split(" ")[0] || "there");
 
     // Honeypot: silently accept bots without notifying anyone or creating a lead.
@@ -1640,11 +1649,13 @@ if(enqForm){
     if(accVal && emailVal.trim()){
       data.append("_autoresponse",
         "Hi " + (nameEl.value.trim().split(" ")[0] || "there") + ",\n\n" +
-        "Thanks for your enquiry with VOZIDEX! Good news — the \"" + accVal +
-        "\" you're interested in is available at our shop.\n\n" +
-        "Feel free to drop by anytime during our hours:\n" +
-        CONFIG.shopHours + "\n" + CONFIG.shopAddress + "\n\n" +
-        "See you soon!\n— Team VOZIDEX");
+        "Thank you for reaching out to VOZIDEX — great choice!\n\n" +
+        "Good news: the \"" + accVal + "\" you're looking for is in stock and ready " +
+        "at our shop. We'd love for you to come see it in person.\n\n" +
+        "We're open:\n" + CONFIG.shopHours + "\n" + CONFIG.shopAddress + "\n\n" +
+        "Have any questions in the meantime? Just reply to this email or give us a " +
+        "call — we're always happy to help. We look forward to welcoming you!\n\n" +
+        "Warm regards,\nTeam VOZIDEX");
     }
     try{
       const res = await fetch("https://formsubmit.co/ajax/" + CONFIG.enquiryEmail, {
