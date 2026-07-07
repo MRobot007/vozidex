@@ -1574,6 +1574,7 @@ async function postLeadToCrm(){
     name: document.getElementById("ef-name").value.trim(),
     phone: document.getElementById("ef-phone").value.trim(),
     email: email || undefined,
+    accessory: accessory || undefined,
     interestedIn: interestedIn || undefined,
     source: "Website",
     notes: notes || undefined
@@ -1643,20 +1644,9 @@ if(enqForm){
     data.append("_template", "table");
     data.append("_captcha", "false");
 
-    // Auto-reply to the customer when they picked an accessory we stock.
-    const accVal = (document.getElementById("ef-accessory") || {}).value || "";
-    const emailVal = (document.getElementById("ef-email") || {}).value || "";
-    if(accVal && emailVal.trim()){
-      data.append("_autoresponse",
-        "Hi " + (nameEl.value.trim().split(" ")[0] || "there") + ",\n\n" +
-        "Thank you for reaching out to VOZIDEX — great choice!\n\n" +
-        "Good news: the \"" + accVal + "\" you're looking for is in stock and ready " +
-        "at our shop. We'd love for you to come see it in person.\n\n" +
-        "We're open:\n" + CONFIG.shopHours + "\n" + CONFIG.shopAddress + "\n\n" +
-        "Have any questions in the meantime? Just reply to this email or give us a " +
-        "call — we're always happy to help. We look forward to welcoming you!\n\n" +
-        "Warm regards,\nTeam VOZIDEX");
-    }
+    // NOTE: the customer's "your accessory is in stock" auto-reply is now sent
+    // by the CRM (reliably, via the shop's own email) when an accessory + email
+    // are provided — so we no longer use formsubmit's auto-responder here.
     try{
       const res = await fetch("https://formsubmit.co/ajax/" + CONFIG.enquiryEmail, {
         method:"POST", headers:{ "Accept":"application/json" }, body:data
