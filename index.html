@@ -62,7 +62,7 @@
    DESIGN TOKENS
    ============================================================ */
 :root{
-  --bg:#eef3f2;
+  --bg:#cbe8e2;
   --surface:rgba(255,255,255,.62);
   --card:rgba(255,255,255,.66);
   --card-2:rgba(15,60,55,.05);
@@ -144,9 +144,10 @@ section{scroll-margin-top:90px}
 .page-bg{
   position:fixed;inset:0;z-index:-3;pointer-events:none;
   background:
-    radial-gradient(680px circle at 12% 12%, rgba(20,184,166,.16), transparent 60%),
-    radial-gradient(760px circle at 88% 24%, rgba(34,211,238,.11), transparent 62%),
-    radial-gradient(640px circle at 50% 98%, rgba(16,185,129,.11), transparent 60%);
+    radial-gradient(900px circle at 12% 8%, rgba(20,184,166,.34), transparent 60%),
+    radial-gradient(950px circle at 90% 18%, rgba(34,211,238,.24), transparent 62%),
+    radial-gradient(820px circle at 50% 100%, rgba(16,185,129,.26), transparent 60%),
+    radial-gradient(720px circle at 78% 72%, rgba(13,148,136,.20), transparent 62%);
 }
 
 /* ---- Glassmorphism: frost every surface ---- */
@@ -204,8 +205,8 @@ section{scroll-margin-top:90px}
 .nav .wrap{display:flex;align-items:center;gap:20px;width:min(100% - 40px,var(--maxw))}
 .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-family:"Plus Jakarta Sans";font-size:1.15rem;letter-spacing:-.02em}
 .brand .mark{
-  width:70px;height:70px;object-fit:contain;flex-shrink:0;padding:8px;
-  background:radial-gradient(circle at 52% 46%, rgba(20,184,166,.45), rgba(34,211,238,.22) 48%, transparent 72%);
+  width:70px;height:70px;object-fit:contain;flex-shrink:0;
+  filter:drop-shadow(0 3px 9px rgba(15,60,55,.22));
 }
 .footer .brand .mark{width:72px;height:72px}
 .nav-links{display:flex;gap:6px;margin-left:14px}
