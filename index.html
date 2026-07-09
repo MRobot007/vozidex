@@ -754,7 +754,9 @@ section{scroll-margin-top:90px}
   linear-gradient(160deg,#bfe4dd,#a7d7ce)}
 .bike-ph svg{width:70px;height:70px;color:rgba(15,60,55,.34);stroke-width:1.4}
 .bike-ph small{position:absolute;bottom:12px;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,60,55,.42)}
-.bike-ph .tag{position:absolute;top:12px;left:12px;padding:.32em .8em;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.04em;background:var(--accent);color:#eafffb}
+.bike-ph .tag{position:absolute;top:12px;left:12px;z-index:2;padding:.32em .8em;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.04em;background:var(--accent);color:#eafffb}
+.bike-ph .bike-img{width:100%;height:100%;object-fit:contain;padding:14px 16px 10px;filter:drop-shadow(0 14px 16px rgba(6,40,36,.3));transition:transform var(--dur) var(--ease)}
+.bike-card:hover .bike-ph .bike-img{transform:scale(1.06) translateY(-2px)}
 .bike-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:5px}
 .bike-body h3{font-size:1.12rem}
 .bike-meta{display:flex;flex-wrap:wrap;gap:5px 14px;color:var(--muted);font-size:.82rem;margin:2px 0 6px}
@@ -959,47 +961,47 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
     <div class="sec-head center reveal">
       <span class="kicker">Buy &amp; sell</span>
       <h2 id="bikes-heading">Bikes in our garage</h2>
-      <p>Inspected, serviced and ready to ride. Photos are being added — enquire and we'll send you full details and live pictures.</p>
+      <p>Inspected, serviced and ready to ride. Enquire for full service history, live pictures and a test ride.</p>
     </div>
 
     <div class="bikes-grid" id="bikesGrid">
       <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17h6l4-8h3M9 17l4-8M12 9l-2-4H7"/></svg><small>Photo coming soon</small></div>
+        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-blue.png" alt="Suzuki GSX-R1000 for sale" loading="lazy" /></div>
         <div class="bike-body">
-          <h3>Yamaha MT-07</h3>
-          <div class="bike-meta"><span>2021</span><span>18 400 km</span><span>689 cc</span></div>
-          <p class="bike-price">165 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('Yamaha MT-07')">Enquire</button>
+          <h3>Suzuki GSX-R1000</h3>
+          <div class="bike-meta"><span>2019</span><span>21 300 km</span><span>999 cc</span></div>
+          <p class="bike-price">285 000 Kč <small>· negotiable</small></p>
+          <button type="button" class="btn btn-yellow" onclick="enquireBike('Suzuki GSX-R1000')">Enquire</button>
         </div>
       </article>
 
       <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17h6l4-8h3M9 17l4-8M12 9l-2-4H7"/></svg><small>Photo coming soon</small></div>
+        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-orange.png" alt="KTM RC 390 for sale" loading="lazy" /></div>
         <div class="bike-body">
-          <h3>Honda CB500F</h3>
-          <div class="bike-meta"><span>2022</span><span>9 100 km</span><span>471 cc</span></div>
-          <p class="bike-price">148 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('Honda CB500F')">Enquire</button>
+          <h3>KTM RC 390</h3>
+          <div class="bike-meta"><span>2021</span><span>12 800 km</span><span>373 cc</span></div>
+          <p class="bike-price">135 000 Kč <small>· negotiable</small></p>
+          <button type="button" class="btn btn-yellow" onclick="enquireBike('KTM RC 390')">Enquire</button>
         </div>
       </article>
 
       <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17h6l4-8h3M9 17l4-8M12 9l-2-4H7"/></svg><small>Photo coming soon</small></div>
+        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-red.png" alt="Aprilia RS 660 for sale" loading="lazy" /></div>
         <div class="bike-body">
-          <h3>Kawasaki Z650</h3>
-          <div class="bike-meta"><span>2020</span><span>24 700 km</span><span>649 cc</span></div>
-          <p class="bike-price">132 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('Kawasaki Z650')">Enquire</button>
+          <h3>Aprilia RS 660</h3>
+          <div class="bike-meta"><span>2021</span><span>9 600 km</span><span>659 cc</span></div>
+          <p class="bike-price">245 000 Kč <small>· negotiable</small></p>
+          <button type="button" class="btn btn-yellow" onclick="enquireBike('Aprilia RS 660')">Enquire</button>
         </div>
       </article>
 
       <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17h6l4-8h3M9 17l4-8M12 9l-2-4H7"/></svg><small>Photo coming soon</small></div>
+        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-red2.png" alt="Ducati Panigale V2 for sale" loading="lazy" /></div>
         <div class="bike-body">
-          <h3>KTM 390 Duke</h3>
-          <div class="bike-meta"><span>2021</span><span>13 200 km</span><span>373 cc</span></div>
-          <p class="bike-price">118 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('KTM 390 Duke')">Enquire</button>
+          <h3>Ducati Panigale V2</h3>
+          <div class="bike-meta"><span>2020</span><span>8 200 km</span><span>955 cc</span></div>
+          <p class="bike-price">395 000 Kč <small>· negotiable</small></p>
+          <button type="button" class="btn btn-yellow" onclick="enquireBike('Ducati Panigale V2')">Enquire</button>
         </div>
       </article>
     </div>
