@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>VOZIDEX — Bike Service, Repair, Sales &amp; Accessories in Prague</title>
-<meta name="description" content="VOZIDEX in Žižkov, Prague is your one-stop bike garage — book servicing, engine work, tyres, detailing and pickup-drop online. We also buy and sell bikes and cars and fit accessories in-shop." />
+<title>VOZIDEX — Used Cars, Rentals &amp; Accessories in Prague</title>
+<meta name="description" content="VOZIDEX in Žižkov, Prague buys and sells inspected used cars, runs self-drive & chauffeur rentals, and fits accessories in-shop. Enquire for today's stock." />
 <meta name="theme-color" content="#eef3f2" />
 <link rel="canonical" href="https://www.vozidex.example/" />
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="business.business" />
 <meta property="og:site_name" content="VOZIDEX" />
-<meta property="og:title" content="VOZIDEX — Bike Service, Sales & Accessories in Prague" />
-<meta property="og:description" content="Bike servicing & repair, bike and car sales, and in-shop accessory fitting in Žižkov, Prague. Trusted since 2016." />
+<meta property="og:title" content="VOZIDEX — Used Cars, Rentals & Accessories in Prague" />
+<meta property="og:description" content="Inspected used cars, self-drive & chauffeur rentals, and in-shop accessory fitting in Žižkov, Prague. Trusted since 2016." />
 <meta property="og:locale" content="en_CZ" />
 <meta property="og:url" content="https://www.vozidex.example/" />
 <!-- Replace with a real hosted preview image at deploy time -->
 <meta property="og:image" content="https://www.vozidex.example/og.jpg" />
-<meta property="og:image:alt" content="VOZIDEX — bike service, sales and accessories in Prague" />
+<meta property="og:image:alt" content="VOZIDEX — used cars, rentals and accessories in Prague" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.vozidex.example/og.jpg" />
 
@@ -36,7 +36,7 @@
   "@context": "https://schema.org",
   "@type": "AutoDealer",
   "name": "VOZIDEX",
-  "description": "Bike servicing & repair, bike and car sales, and accessory fitting in Žižkov, Prague.",
+  "description": "Used car sales, self-drive & chauffeur-driven rentals, and accessory fitting in Žižkov, Prague.",
   "image": "https://www.vozidex.example/og.jpg",
   "url": "https://www.vozidex.example/",
   "telephone": "+420777123456",
@@ -55,7 +55,7 @@
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "19:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "16:00" }
   ],
-  "makesOffered": ["Yamaha","Honda","Kawasaki","KTM","BMW","Ducati"]
+  "makesOffered": ["Škoda","Volkswagen","BMW","Audi","Toyota","Ford"]
 }
 </script>
 
@@ -353,11 +353,6 @@ section{scroll-margin-top:90px}
 }
 .fc-rent:hover{box-shadow:0 30px 70px -34px rgba(15,60,55,.2)}
 .fc-rent .fc-eyebrow{color:#4a4a44}
-/* Bike image is squarer than a car — keep it in the top zone, clear of the text */
-.fc-rent .fc-car{
-  width:88%;max-width:430px;max-height:44%;top:5%;
-  filter:drop-shadow(0 16px 18px rgba(15,60,55,.26));
-}
 
 /* Trust row */
 .trust-row{
@@ -690,7 +685,6 @@ section{scroll-margin-top:90px}
   .hero-cards{grid-template-columns:1fr}
   .feature-card{min-height:400px}
   .fc-car{width:56%;max-height:46%;top:8%}
-  .fc-rent .fc-car{width:60%;max-width:360px;max-height:46%;top:7%}
   .plans{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -705,7 +699,6 @@ section{scroll-margin-top:90px}
   .nav-actions{gap:8px}
   .feature-card{min-height:350px;padding:26px}
   .fc-car{width:80%;max-height:42%;top:6%}
-  .fc-rent .fc-car{width:76%;max-width:300px;max-height:42%;top:5%}
   .fc-content{max-width:100%}
   .fc-content h2{font-size:clamp(1.7rem,8vw,2.2rem)}
   .fc-content p{max-width:100%}
@@ -734,56 +727,6 @@ section{scroll-margin-top:90px}
   .reveal{opacity:1;transform:none}
 }
 
-/* ===================== BIKE SERVICES (Phase 1) ===================== */
-/* Shared section heading for Services + Bikes */
-.sec-head{max-width:660px;margin:0 0 clamp(28px,4vw,48px)}
-.sec-head.center{text-align:center;margin-inline:auto}
-.sec-head .kicker{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-.sec-head h2{font-size:clamp(1.9rem,1rem+3vw,3rem);line-height:1.04;margin-bottom:12px}
-.sec-head p{color:var(--muted);font-size:1.02rem;line-height:1.6}
-
-/* Service catalog cards */
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:20px}
-.svc-card{position:relative;display:flex;flex-direction:column;gap:14px;padding:26px 24px;border-radius:var(--r-card);background:var(--card);border:1px solid var(--stroke);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-hi);overflow:hidden;transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur)}
-.svc-card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 100% 0,rgba(13,148,136,.12),transparent 60%);opacity:0;transition:opacity var(--dur)}
-.svc-card:hover{transform:translateY(-6px);border-color:rgba(13,148,136,.4);box-shadow:var(--shadow-card)}
-.svc-card:hover::before{opacity:1}
-.svc-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(150deg,var(--accent),var(--accent-hi));color:#eafffb;box-shadow:0 10px 22px -10px rgba(13,148,136,.6)}
-.svc-ico svg{width:26px;height:26px;stroke-width:1.85}
-.svc-card h3{font-size:1.22rem}
-.svc-card .svc-desc{color:var(--muted);font-size:.92rem;line-height:1.55;flex:1}
-.svc-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:2px}
-.svc-price b{font-size:1.26rem}
-.svc-price small{display:block;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-
-/* Bike inventory — cards without photos (placeholder media) */
-.bikes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:20px}
-.bike-card{display:flex;flex-direction:column;border-radius:var(--r-card);background:var(--card);border:1px solid var(--stroke);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-hi);overflow:hidden;transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur)}
-.bike-card:hover{transform:translateY(-6px);border-color:rgba(13,148,136,.4);box-shadow:var(--shadow-card)}
-.bike-ph{position:relative;aspect-ratio:16/11;display:grid;place-items:center;background:
-  radial-gradient(85% 70% at 30% 15%,rgba(13,148,136,.18),transparent 62%),
-  linear-gradient(160deg,#bfe4dd,#a7d7ce)}
-.bike-ph svg{width:70px;height:70px;color:rgba(15,60,55,.34);stroke-width:1.4}
-.bike-ph small{position:absolute;bottom:12px;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,60,55,.42)}
-.bike-ph .tag{position:absolute;top:12px;left:12px;z-index:2;padding:.32em .8em;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.04em;background:var(--accent);color:#eafffb}
-.bike-ph .bike-img{width:100%;height:100%;object-fit:contain;padding:14px 16px 10px;filter:drop-shadow(0 14px 16px rgba(6,40,36,.3));transition:transform var(--dur) var(--ease)}
-.bike-card:hover .bike-ph .bike-img{transform:scale(1.06) translateY(-2px)}
-.bike-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:5px}
-.bike-body h3{font-size:1.12rem}
-.bike-meta{display:flex;flex-wrap:wrap;gap:5px 14px;color:var(--muted);font-size:.82rem;margin:2px 0 6px}
-.bike-meta span{display:inline-flex;align-items:center;gap:5px}
-.bike-price{font-size:1.3rem;margin:2px 0 12px;font-family:"Plus Jakarta Sans",sans-serif}
-.bike-price small{font-size:.76rem;color:var(--muted);font-weight:500}
-
-/* Scheduler — date + time-slot picker inside the enquiry form */
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.slot-label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin:2px 0 10px}
-.slot-row{display:flex;flex-wrap:wrap;gap:9px}
-.slot{padding:.55em 1em;border-radius:999px;border:1px solid var(--stroke-2);background:rgba(255,255,255,.5);color:var(--muted);font:inherit;font-size:.86rem;font-weight:600;cursor:pointer;transition:all var(--dur)}
-.slot:hover{color:var(--text);border-color:var(--accent)}
-.slot.active{background:var(--accent);color:#eafffb;border-color:var(--accent);box-shadow:0 8px 18px -8px rgba(13,148,136,.7)}
-input[type="date"].enq-input{color-scheme:light;cursor:pointer}
-@media(max-width:560px){.field-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -800,9 +743,8 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
       <img class="mark" src="assets/logo.png" alt="VOZIDEX Customs" />VOZIDEX
     </a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#bikes">Bikes</a>
       <a href="#stock">Cars</a>
+      <a href="#rentals">Rentals</a>
       <a href="#accessories">Accessories</a>
       <a href="#visit">Visit Us</a>
     </nav>
@@ -811,7 +753,7 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2Z"/></svg>
         Call now
       </a>
-      <a class="btn btn-yellow desktop-only" href="#enquiry">Book a service</a>
+      <a class="btn btn-yellow desktop-only" href="#enquiry">Enquire</a>
       <button class="fav-btn" id="favBtn" type="button" aria-label="View saved favourites" aria-pressed="false">
         <svg viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
         <span class="fav-badge" id="favBadge" aria-hidden="true">0</span>
@@ -824,14 +766,13 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#services">Services</a>
-  <a href="#bikes">Bikes</a>
   <a href="#stock">Cars</a>
+  <a href="#rentals">Rentals</a>
   <a href="#accessories">Accessories</a>
   <a href="#visit">Visit Us</a>
   <div class="row">
     <a class="btn btn-ghost" href="tel:+420777123456">Call now</a>
-    <a class="btn btn-yellow" href="#enquiry">Book a service</a>
+    <a class="btn btn-yellow" href="#enquiry">Enquire</a>
   </div>
 </div>
 
@@ -845,8 +786,8 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
   <div class="wrap">
     <div class="hero-inner">
       <p class="eyebrow reveal">Žižkov · Praha — trusted since 2016</p>
-      <h1 id="hero-heading" class="reveal">Service. Repair. <span class="accent">Ride.</span></h1>
-      <p class="hero-sub reveal">VOZIDEX is Prague's one-stop bike garage — book a service, engine work, tyres, brakes or detailing in seconds. We also buy &amp; sell bikes and cars, and fit accessories in-shop.</p>
+      <h1 id="hero-heading" class="reveal">Buy. Rent. Accessorize. <span class="accent">Cars</span></h1>
+      <p class="hero-sub reveal">VOZIDEX brings performance and everyday cars to Prague — buy, rent or upgrade since 2016. Every car is inspected, honestly priced and backed by full after-sales support.</p>
 
       <form class="searchbar reveal" id="searchForm" role="search" aria-label="Search stock">
         <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -860,24 +801,25 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
 
     <div class="hero-cards">
       <div class="feature-card fc-buy reveal">
-        <img class="fc-car" src="assets/hero-blue.png" alt="VOZIDEX workshop vehicle" loading="eager" />
+        <img class="fc-car" src="assets/hero-blue.png" alt="Blue sports car for sale" loading="eager" />
         <div class="fc-content">
-          <p class="fc-eyebrow">Bike &amp; car servicing</p>
-          <h2>Book a Service</h2>
-          <p>Pick a service, choose a slot — general service, repairs, tyres or detailing.</p>
-          <a class="btn fc-btn-cream" href="#services">
-            Book your slot
+          <p class="fc-eyebrow">Used car sales</p>
+          <h2>Buy a Car</h2>
+          <p>Inspected, fairly priced cars — ready to drive home this week.</p>
+          <a class="btn fc-btn-cream" href="#stock">
+            Find your next car
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
       <div class="feature-card fc-rent reveal">
-        <img class="fc-car" src="assets/bike-orange.png" alt="VOZIDEX bikes for sale" loading="eager" />
+        <img class="fc-car" src="assets/hero-yellow.png" alt="Yellow sports car for rent" loading="eager" />
         <div class="fc-content">
-          <h2>Bikes &amp; Cars</h2>
-          <p>Honestly priced, inspected bikes and cars — or sell yours to us this week.</p>
-          <a class="btn btn-yellow" href="#bikes">
-            Browse bikes
+          <p class="fc-eyebrow">Self-drive &amp; with driver</p>
+          <h2>Rent a Car</h2>
+          <p>Daily, weekly or monthly rentals for city runs and road trips.</p>
+          <a class="btn btn-yellow" href="#rentals">
+            Check rental plans
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -885,140 +827,9 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
     </div>
 
     <p class="trust-row reveal">
-      <span><b data-count="9000" data-suffix="+" data-comma="1">9,000+</b> bikes serviced</span><span class="dot">·</span>
-      <span><b data-count="850" data-suffix="+">850+</b> vehicles sold</span><span class="dot">·</span>
-      <span><b data-count="100" data-suffix="%">100%</b> genuine parts</span>
-    </p>
-  </div>
-</section>
-
-<!-- ============================ SERVICES ============================ -->
-<section class="section" id="services" aria-labelledby="services-heading">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="kicker">Workshop &amp; garage</span>
-      <h2 id="services-heading">Book a bike service in seconds</h2>
-      <p>Genuine parts, trained mechanics and honest pricing. Pick a service below, choose a slot, and we'll confirm your booking.</p>
-    </div>
-
-    <div class="svc-grid">
-      <article class="svc-card reveal">
-        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-.5-.5-2.1 2.7-2.5z"/></svg></span>
-        <h3>General Service</h3>
-        <p class="svc-desc">Oil change, chain lube, brake check, tuning and a 20-point safety inspection.</p>
-        <div class="svc-foot">
-          <span class="svc-price"><b>990 Kč</b><small>Starting from</small></span>
-          <button type="button" class="btn btn-yellow svc-book" onclick="bookService('General Service')">Book</button>
-        </div>
-      </article>
-
-      <article class="svc-card reveal">
-        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 5.5 5 10a5 5 0 0 1-10 0c0-4.5 5-10 5-10z"/></svg></span>
-        <h3>Full Service</h3>
-        <p class="svc-desc">Complete overhaul — engine oil, filters, coolant, wash and detailed diagnostics.</p>
-        <div class="svc-foot">
-          <span class="svc-price"><b>2 490 Kč</b><small>Starting from</small></span>
-          <button type="button" class="btn btn-yellow svc-book" onclick="bookService('Full Service')">Book</button>
-        </div>
-      </article>
-
-      <article class="svc-card reveal">
-        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
-        <h3>Engine &amp; Repair</h3>
-        <p class="svc-desc">Engine work, electrical faults, clutch and gearbox repairs by trained technicians.</p>
-        <div class="svc-foot">
-          <span class="svc-price"><b>1 890 Kč</b><small>Starting from</small></span>
-          <button type="button" class="btn btn-yellow svc-book" onclick="bookService('Engine &amp; Repair')">Book</button>
-        </div>
-      </article>
-
-      <article class="svc-card reveal">
-        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg></span>
-        <h3>Tyres &amp; Brakes</h3>
-        <p class="svc-desc">Tyre replacement, wheel balancing, brake pads and disc servicing — same-day.</p>
-        <div class="svc-foot">
-          <span class="svc-price"><b>790 Kč</b><small>Starting from</small></span>
-          <button type="button" class="btn btn-yellow svc-book" onclick="bookService('Tyres &amp; Brakes')">Book</button>
-        </div>
-      </article>
-
-      <article class="svc-card reveal">
-        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.3 5.7L21 11l-5.7 2.3L13 19l-2.3-5.7L5 11l5.7-2.3z"/></svg></span>
-        <h3>Wash &amp; Detailing</h3>
-        <p class="svc-desc">Foam wash, polish, ceramic coat and deep detailing to bring back the shine.</p>
-        <div class="svc-foot">
-          <span class="svc-price"><b>590 Kč</b><small>Starting from</small></span>
-          <button type="button" class="btn btn-yellow svc-book" onclick="bookService('Wash &amp; Detailing')">Book</button>
-        </div>
-      </article>
-
-      <article class="svc-card reveal">
-        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h13v10H1z"/><path d="M14 8h4l3 3v2h-7z"/><circle cx="5.5" cy="16.5" r="2"/><circle cx="17.5" cy="16.5" r="2"/></svg></span>
-        <h3>Pickup &amp; Drop</h3>
-        <p class="svc-desc">Free doorstep pickup and drop across Prague when you book any full service.</p>
-        <div class="svc-foot">
-          <span class="svc-price"><b>Free</b><small>With full service</small></span>
-          <button type="button" class="btn btn-yellow svc-book" onclick="bookService('Pickup &amp; Drop')">Book</button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ BIKES INVENTORY ============================ -->
-<section class="section" id="bikes" aria-labelledby="bikes-heading">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="kicker">Buy &amp; sell</span>
-      <h2 id="bikes-heading">Bikes in our garage</h2>
-      <p>Inspected, serviced and ready to ride. Enquire for full service history, live pictures and a test ride.</p>
-    </div>
-
-    <div class="bikes-grid" id="bikesGrid">
-      <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-blue.png" alt="Suzuki GSX-R1000 for sale" loading="lazy" /></div>
-        <div class="bike-body">
-          <h3>Suzuki GSX-R1000</h3>
-          <div class="bike-meta"><span>2019</span><span>21 300 km</span><span>999 cc</span></div>
-          <p class="bike-price">285 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('Suzuki GSX-R1000')">Enquire</button>
-        </div>
-      </article>
-
-      <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-orange.png" alt="KTM RC 390 for sale" loading="lazy" /></div>
-        <div class="bike-body">
-          <h3>KTM RC 390</h3>
-          <div class="bike-meta"><span>2021</span><span>12 800 km</span><span>373 cc</span></div>
-          <p class="bike-price">135 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('KTM RC 390')">Enquire</button>
-        </div>
-      </article>
-
-      <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-red.png" alt="Aprilia RS 660 for sale" loading="lazy" /></div>
-        <div class="bike-body">
-          <h3>Aprilia RS 660</h3>
-          <div class="bike-meta"><span>2021</span><span>9 600 km</span><span>659 cc</span></div>
-          <p class="bike-price">245 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('Aprilia RS 660')">Enquire</button>
-        </div>
-      </article>
-
-      <article class="bike-card reveal">
-        <div class="bike-ph"><span class="tag">For Sale</span><img class="bike-img" src="assets/bike-red2.png" alt="Ducati Panigale V2 for sale" loading="lazy" /></div>
-        <div class="bike-body">
-          <h3>Ducati Panigale V2</h3>
-          <div class="bike-meta"><span>2020</span><span>8 200 km</span><span>955 cc</span></div>
-          <p class="bike-price">395 000 Kč <small>· negotiable</small></p>
-          <button type="button" class="btn btn-yellow" onclick="enquireBike('Ducati Panigale V2')">Enquire</button>
-        </div>
-      </article>
-    </div>
-
-    <p class="sec-head center reveal" style="margin-top:34px">
-      <span class="muted">Want to sell your bike?</span>
-      <a class="accent" href="#enquiry" onclick="bookService('Sell my bike')" style="font-weight:700"> Get a free valuation →</a>
+      <span><b data-count="850" data-suffix="+">850+</b> cars sold</span><span class="dot">·</span>
+      <span><b data-count="12" data-suffix="-car">12-car</b> rental fleet</span><span class="dot">·</span>
+      <span><b data-count="2000" data-suffix="+" data-comma="1">2,000+</b> happy customers</span>
     </p>
   </div>
 </section>
@@ -1120,9 +931,9 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
     <div class="about-grid">
       <div class="about-story reveal">
         <p class="eyebrow">Who we are</p>
-        <h2 id="about-heading" style="font-size:clamp(1.9rem,3.6vw,3rem);margin-top:12px">Honest service, honest paperwork</h2>
-        <p>VOZIDEX started in 2016 as a small workshop in Žižkov with one promise — no pushy sales, no hidden history. Owner <span class="owner">Tomáš Novák</span> personally inspects every bike and car that comes through the gate, so you only ever see machines we'd ride ourselves.</p>
-        <p>Today we service and repair bikes, sell trusted bikes and cars, and fit accessories in our own workshop. Whatever you ride or drive away on, the paperwork is clean — and the number you call after the sale is still ours.</p>
+        <h2 id="about-heading" style="font-size:clamp(1.9rem,3.6vw,3rem);margin-top:12px">Honest cars, honest paperwork</h2>
+        <p>VOZIDEX started in 2016 as a small yard in Žižkov with one promise — no pushy sales, no hidden history. Owner <span class="owner">Tomáš Novák</span> personally inspects every car that comes through the gate, so you only ever see stock we'd put our own family in.</p>
+        <p>Today we sell trusted used cars, run a small self-drive and chauffeur rental fleet, and fit accessories in our own workshop. Whatever you drive away in, the paperwork is clean — and the number you call after the sale is still ours.</p>
 
         <div class="why-grid">
           <div class="why-card reveal">
@@ -1203,9 +1014,9 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
 <section class="section enquiry" id="enquiry" aria-labelledby="enq-heading">
   <div class="wrap">
     <div class="sec-head reveal" style="max-width:100%;text-align:center;margin-inline:auto">
-      <p class="eyebrow">Book in 30 seconds</p>
-      <h2 id="enq-heading">Book a service <span class="accent">or enquire</span></h2>
-      <p style="margin-inline:auto;max-width:560px">Pick a service and a slot, or tell us what you're after — we confirm every booking within a few hours during shop hours.</p>
+      <p class="eyebrow">One quick step</p>
+      <h2 id="enq-heading">Send us an <span class="accent">Enquiry</span></h2>
+      <p style="margin-inline:auto;max-width:560px">Tell us what you're looking for — we reply within a few hours during shop hours.</p>
     </div>
 
     <div class="enquiry-card reveal">
@@ -1230,45 +1041,16 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
             <input class="enq-input" id="ef-email" name="email" type="email" placeholder="you@email.com — we'll confirm availability" autocomplete="email" />
           </div>
           <div class="enq-field">
-            <label for="ef-interest">Service / interest</label>
+            <label for="ef-interest">I'm interested in</label>
             <select class="enq-select" id="ef-interest" name="interest">
-              <optgroup label="Bike services">
-                <option>General Service</option>
-                <option>Full Service</option>
-                <option>Engine &amp; Repair</option>
-                <option>Tyres &amp; Brakes</option>
-                <option>Wash &amp; Detailing</option>
-                <option>Pickup &amp; Drop</option>
-              </optgroup>
-              <optgroup label="Buy &amp; sell">
-                <option>Buying a bike</option>
-                <option>Sell my bike</option>
-                <option>Buying a used car</option>
-                <option>Sell my car</option>
-              </optgroup>
-              <optgroup label="Other">
-                <option>Accessories &amp; fitting</option>
-                <option>Renting a car</option>
-              </optgroup>
+              <option>Buying a used car</option>
+              <option>Renting a car</option>
+              <option>Accessories &amp; fitting</option>
             </select>
           </div>
           <div class="enq-field">
-            <label for="ef-preferred-date">Preferred date</label>
-            <input class="enq-input" id="ef-preferred-date" name="preferredDate" type="date" />
-          </div>
-          <div class="enq-field full">
-            <span class="slot-label" id="slot-label">Preferred time slot</span>
-            <div class="slot-row" id="slotRow" role="radiogroup" aria-labelledby="slot-label">
-              <button type="button" class="slot" role="radio" aria-checked="false" data-slot="Morning (10–12)">Morning · 10–12</button>
-              <button type="button" class="slot" role="radio" aria-checked="false" data-slot="Midday (12–3)">Midday · 12–3</button>
-              <button type="button" class="slot" role="radio" aria-checked="false" data-slot="Afternoon (3–6)">Afternoon · 3–6</button>
-              <button type="button" class="slot" role="radio" aria-checked="false" data-slot="Evening (6–8)">Evening · 6–8</button>
-            </div>
-            <input type="hidden" id="ef-timeslot" name="timeslot" value="" />
-          </div>
-          <div class="enq-field">
-            <label for="ef-model">Bike / car / model (optional)</label>
-            <input class="enq-input" id="ef-model" name="model" type="text" placeholder="e.g. MT-07, CB500F, Golf" />
+            <label for="ef-model">Car / model / keyword</label>
+            <input class="enq-input" id="ef-model" name="model" type="text" placeholder="e.g. Škoda Octavia, VW Golf, SUV" />
           </div>
           <div class="enq-field">
             <label for="ef-accessory">Accessory you're after (optional)</label>
@@ -1278,12 +1060,12 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
           </div>
           <div class="enq-field full">
             <label for="ef-msg">Message</label>
-            <textarea class="enq-textarea" id="ef-msg" name="message" placeholder="Tell us your bike model, the issue, or any questions…"></textarea>
+            <textarea class="enq-textarea" id="ef-msg" name="message" placeholder="Tell us your budget, timeline or any questions…"></textarea>
           </div>
           <!-- spam honeypot: bots fill this, humans don't -->
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
           <button type="submit" class="btn btn-yellow enq-submit">
-            Confirm booking
+            Send enquiry
             <span class="chev" aria-hidden="true"><span>›</span><span>›</span><span>›</span></span>
           </button>
         </form>
@@ -1304,7 +1086,7 @@ input[type="date"].enq-input{color-scheme:light;cursor:pointer}
     <div class="footer-grid">
       <div>
         <a href="#top" class="brand"><img class="mark" src="assets/logo.png" alt="VOZIDEX Customs" />VOZIDEX</a>
-        <p class="muted" style="margin-top:12px;max-width:34ch;font-size:.92rem">Bike service &amp; repair, sales, and accessory fitting — trusted in Prague since 2016.</p>
+        <p class="muted" style="margin-top:12px;max-width:34ch;font-size:.92rem">Used cars, rentals &amp; accessory fitting — trusted in Prague since 2016.</p>
       </div>
       <div class="footer-meta">
         Koněvova 141, Žižkov, Praha 3, 130 00<br>
@@ -1808,23 +1590,14 @@ async function postLeadToCrm(){
   const accessory = accEl ? accEl.value : "";
   const email = emailEl ? emailEl.value.trim() : "";
   const message = document.getElementById("ef-msg").value.trim();
-  const dateEl = document.getElementById("ef-preferred-date");
-  const slotEl = document.getElementById("ef-timeslot");
-  const preferredDate = dateEl ? dateEl.value : "";          // YYYY-MM-DD from <input type=date>
-  const timeslot = slotEl ? slotEl.value : "";
   const interestedIn = [interest, model, accessory ? ("Accessory: " + accessory) : ""].filter(Boolean).join(" — ");
-  const notes = [
-    message,
-    timeslot ? ("Preferred time: " + timeslot) : "",
-    email ? ("Email: " + email) : ""
-  ].filter(Boolean).join("\n");
+  const notes = [message, email ? ("Email: " + email) : ""].filter(Boolean).join("\n");
   const payload = {
     name: document.getElementById("ef-name").value.trim(),
     phone: document.getElementById("ef-phone").value.trim(),
     email: email || undefined,
     accessory: accessory || undefined,
     interestedIn: interestedIn || undefined,
-    followUpDate: preferredDate || undefined,               // scheduler date → CRM follow-up
     source: "Website",
     notes: notes || undefined
   };
@@ -1854,49 +1627,6 @@ async function loadAccessories(){
   }catch(err){ /* leave the default "none" option only */ }
 }
 loadAccessories();
-
-/* ---- Scheduler: time-slot chips ---- */
-(function(){
-  const row = document.getElementById("slotRow");
-  const hidden = document.getElementById("ef-timeslot");
-  if(!row || !hidden) return;
-  row.querySelectorAll(".slot").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      const already = btn.classList.contains("active");
-      row.querySelectorAll(".slot").forEach(function(b){
-        b.classList.remove("active"); b.setAttribute("aria-checked","false");
-      });
-      if(already){ hidden.value = ""; return; }         // click again to clear
-      btn.classList.add("active"); btn.setAttribute("aria-checked","true");
-      hidden.value = btn.dataset.slot || "";
-    });
-  });
-})();
-
-/* Prefill the form's service and jump to the booking form. Called from
-   the service cards and the "sell your bike" link. */
-function setInterest(value){
-  const sel = document.getElementById("ef-interest");
-  if(!sel || !value) return;
-  const opts = Array.from(sel.options);
-  const match = opts.find(function(o){ return o.value === value || o.text === value; });
-  if(match){ sel.value = match.value; }
-}
-function bookService(service){
-  setInterest(service);
-  scrollToId("enquiry");
-  const nameEl = document.getElementById("ef-name");
-  if(nameEl) setTimeout(function(){ nameEl.focus({preventScroll:true}); }, 420);
-}
-/* Prefill for a specific bike enquiry (bike inventory cards). */
-function enquireBike(name){
-  setInterest("Buying a bike");
-  const model = document.getElementById("ef-model");
-  if(model) model.value = name;
-  scrollToId("enquiry");
-  const nameEl = document.getElementById("ef-name");
-  if(nameEl) setTimeout(function(){ nameEl.focus({preventScroll:true}); }, 420);
-}
 
 if(enqForm){
   enqForm.addEventListener("submit", async (e)=>{
