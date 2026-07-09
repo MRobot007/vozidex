@@ -349,6 +349,11 @@ section{scroll-margin-top:90px}
 }
 .fc-rent:hover{box-shadow:0 30px 70px -34px rgba(15,60,55,.2)}
 .fc-rent .fc-eyebrow{color:#4a4a44}
+/* Bike image is squarer than a car — let it fill the card and sit lower */
+.fc-rent .fc-car{
+  width:94%;max-width:520px;max-height:58%;top:9%;
+  filter:drop-shadow(0 18px 20px rgba(15,60,55,.28));
+}
 
 /* Trust row */
 .trust-row{
@@ -681,6 +686,7 @@ section{scroll-margin-top:90px}
   .hero-cards{grid-template-columns:1fr}
   .feature-card{min-height:400px}
   .fc-car{width:56%;max-height:46%;top:8%}
+  .fc-rent .fc-car{width:62%;max-width:420px;max-height:58%;top:8%}
   .plans{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -695,6 +701,7 @@ section{scroll-margin-top:90px}
   .nav-actions{gap:8px}
   .feature-card{min-height:350px;padding:26px}
   .fc-car{width:80%;max-height:42%;top:6%}
+  .fc-rent .fc-car{width:80%;max-width:340px;max-height:52%;top:6%}
   .fc-content{max-width:100%}
   .fc-content h2{font-size:clamp(1.7rem,8vw,2.2rem)}
   .fc-content p{max-width:100%}
